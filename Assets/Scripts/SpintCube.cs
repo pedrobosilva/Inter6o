@@ -10,7 +10,7 @@ public class SpintCube : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		gameObject.transform.Rotate (5, 0, 0);
-	
+		gameObject.transform.Rotate (5, 5, 0);
+		gameObject.transform.Translate (0.05f, 0, 0);
 	}
 }
