@@ -7,6 +7,7 @@ public class TesteCria1Questao : MonoBehaviour {
 
 	public GameObject pergunta;
 
+
 	// Use this for initialization
 	void Start () {
 		
@@ -59,8 +60,29 @@ public class TesteCria1Questao : MonoBehaviour {
 				"Curiosidade5",
 				"Venceu a corrida de Inauguração do autódromo de interlagos.",
 				"Curiosidade6"));
-		Debug.Log(GameControl.gControl.perguntasList [0].respostasBd [2].textoDaResposta);
-		Debug.Log(GameControl.gControl.perguntasList [0].respostasBd [2].correta);
+		GameControl.gControl.perguntasList.Add(
+			new PerguntasClass(
+				"Titulo 2",
+				PerguntasClass.Temas.Outro,
+				"Campeão mundial mais jovem de F1 até então.",
+				"Curiosidade1",
+				"Primeiro e único campeão brasileiro de F1 da história.",
+				"Curiosidade2",
+				"Campeão das 500 milhas de Indianápolis.",
+				"Curiosidade3",
+				"Que encerrou sua carreira após um acidente no michigan speedway.",
+				"Curiosidade4",
+				"Presenciou o primeiro campeão póstumo de F1.",
+				"Curiosidade5",
+				"Venceu a corrida de Inauguração do autódromo de interlagos.",
+				"Curiosidade6"));
+		
+		//Debug.Log(GameControl.gControl.perguntasList [0].respostasBd [2].textoDaResposta);
+		//Debug.Log(GameControl.gControl.perguntasList [0].respostasBd [2].correta);
+
+		GeradorDeArquivo geradorDeArquivo = new GeradorDeArquivo();
+
+		geradorDeArquivo.SalvaPerguntas (GameControl.gControl.perguntasList);
 
 
 	/*	pergunta = Instantiate (pergunta);
@@ -85,5 +107,7 @@ public class TesteCria1Questao : MonoBehaviour {
 		perguntaClass.respostasBd [5].estado = RespostasClass.Estados.Normal;
 
 		GameControl.gControl.perguntasBd [0]= pergunta;*/
+
+
 	}
 }

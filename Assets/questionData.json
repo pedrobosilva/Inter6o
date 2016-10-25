@@ -1,0 +1,90 @@
+[
+    {
+        "textoDaPerguntaAr":"Emerson Fittipaldi foi em 1972:",
+        "frequenciaAr":0,
+        "ratingAr":0,
+        "temaAr":4,
+        "respostasAr":[
+            {
+                "estadoAr":0,
+                "textoDaPerguntaAr":"Campeão mundial mais jovem de F1 até então.",
+                "curiosidadeAr":"Curiosidade1",
+                "corretaAr":true
+            },
+            {
+                "estadoAr":0,
+                "textoDaPerguntaAr":"Primeiro e único campeão brasileiro de F1 da história.",
+                "curiosidadeAr":"Curiosidade2",
+                "corretaAr":false
+            },
+            {
+                "estadoAr":0,
+                "textoDaPerguntaAr":"Campeão das 500 milhas de Indianápolis.",
+                "curiosidadeAr":"Curiosidade3",
+                "corretaAr":false
+            },
+            {
+                "estadoAr":0,
+                "textoDaPerguntaAr":"Que encerrou sua carreira após um acidente no michigan speedway.",
+                "curiosidadeAr":"Curiosidade4",
+                "corretaAr":false
+            },
+            {
+                "estadoAr":0,
+                "textoDaPerguntaAr":"Presenciou o primeiro campeão póstumo de F1.",
+                "curiosidadeAr":"Curiosidade5",
+                "corretaAr":false
+            },
+            {
+                "estadoAr":0,
+                "textoDaPerguntaAr":"Venceu a corrida de Inauguração do autódromo de interlagos.",
+                "curiosidadeAr":"Curiosidade6",
+                "corretaAr":false
+            }
+        ]
+    },
+    {
+        "textoDaPerguntaAr":"Titulo 2",
+        "frequenciaAr":0,
+        "ratingAr":0,
+        "temaAr":4,
+        "respostasAr":[
+            {
+                "estadoAr":0,
+                "textoDaPerguntaAr":"Campeão mundial mais jovem de F1 até então.",
+                "curiosidadeAr":"Curiosidade1",
+                "corretaAr":true
+            },
+            {
+                "estadoAr":0,
+                "textoDaPerguntaAr":"Primeiro e único campeão brasileiro de F1 da história.",
+                "curiosidadeAr":"Curiosidade2",
+                "corretaAr":false
+            },
+            {
+                "estadoAr":0,
+                "textoDaPerguntaAr":"Campeão das 500 milhas de Indianápolis.",
+                "curiosidadeAr":"Curiosidade3",
+                "corretaAr":false
+            },
+            {
+                "estadoAr":0,
+                "textoDaPerguntaAr":"Que encerrou sua carreira após um acidente no michigan speedway.",
+                "curiosidadeAr":"Curiosidade4",
+                "corretaAr":false
+            },
+            {
+                "estadoAr":0,
+                "textoDaPerguntaAr":"Presenciou o primeiro campeão póstumo de F1.",
+                "curiosidadeAr":"Curiosidade5",
+                "corretaAr":false
+            },
+            {
+                "estadoAr":0,
+                "textoDaPerguntaAr":"Venceu a corrida de Inauguração do autódromo de interlagos.",
+                "curiosidadeAr":"Curiosidade6",
+                "corretaAr":false
+            }
+        ]
+    }
+]
