@@ -16,6 +16,7 @@ public class CuriosidadePergunta1 : MonoBehaviour {
 	}
 
 	public void CuriosidadeOpen(){
+		AudioControllerGame.Instance.PlaySound (SoundGames.ButtonSound);
 		Instantiate (CuriosidadeCanvas, CuriosidadeCanvas.transform.position, CuriosidadeCanvas.transform.rotation);
 	}
 }
