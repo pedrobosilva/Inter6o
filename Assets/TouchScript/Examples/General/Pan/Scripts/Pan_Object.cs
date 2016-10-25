@@ -11,6 +11,8 @@ public class Pan_Object : MonoBehaviour
 	    targetRotation = transform.localRotation;
 	}
 
+
+
     private void OnEnable()
     {
         transform.FindChild("Button").GetComponent<TapGesture>().Tapped += tapStateChangeHandler;
