@@ -25,6 +25,10 @@ public class LoadGame : MonoBehaviour {
 		SceneManager.LoadScene (valor);
 	}
 
+	public void LoadSceneAndQuestions(){
+		SceneManager.LoadScene (valor);
+	}
+
 	public void QuitGame(){
 		Application.Quit ();
 	}

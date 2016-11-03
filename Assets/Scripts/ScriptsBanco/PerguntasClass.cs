@@ -9,7 +9,7 @@ public class PerguntasClass : MonoBehaviour {
 	public List<RespostasClass> respostasBd = new List<RespostasClass>();
 	public int frequencia;
 	public int rating;
-	public enum Temas {Musica,Futebol,Radio,Arte,Outro};
+	public enum Temas {Cinema,Esporte,Radio,Arte,História,Propaganda,Outro};
 	public Temas tema; 
 	public bool minhaMae = false;
 

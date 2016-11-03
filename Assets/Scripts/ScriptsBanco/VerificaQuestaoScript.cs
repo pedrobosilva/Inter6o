@@ -3,6 +3,8 @@ using System.Collections;
 
 public class VerificaQuestaoScript : MonoBehaviour {
 
+	public GameObject CanvasCuriosidade;
+
 	public GameObject Curiosidade0;
 	public GameObject Curiosidade1;
 	public GameObject Curiosidade2;
@@ -21,22 +23,26 @@ public class VerificaQuestaoScript : MonoBehaviour {
 	void OnTriggerEnter(Collider colision){
 		if (colision.name == "Resposta0") {
 			Curiosidade0.SetActive (true);
-			ButtonScript.Instance.CuriosidadeText.text = GameControl.gControl.perguntasList [1].respostasBd [0].curiosidade;
+			CanvasCuriosidade.SetActive (true);
+
 		}
 			
 			if (colision.name == "Resposta1") {
 			Curiosidade1.SetActive (true);
-			ButtonScript.Instance.CuriosidadeText.text = GameControl.gControl.perguntasList [1].respostasBd [1].curiosidade;
+			CanvasCuriosidade.SetActive (true);
+		
 			}
 	
 			if (colision.name == "Resposta2") {
 			Curiosidade2.SetActive (true);
-			ButtonScript.Instance.CuriosidadeText.text = GameControl.gControl.perguntasList [1].respostasBd [2].curiosidade;
+			CanvasCuriosidade.SetActive (true);
+
 			}
 
 			if (colision.name == "Resposta3") {
 			Curiosidade3.SetActive (true);
-			ButtonScript.Instance.CuriosidadeText.text = GameControl.gControl.perguntasList [1].respostasBd [3].curiosidade;
+			CanvasCuriosidade.SetActive (true);
+
 			}
 	}
 }

@@ -6,6 +6,8 @@ public class AbreGameObject : MonoBehaviour {
 	public GameObject objectToOpen;
 	public GameObject objectToClose;
 
+	public GameObject botaoToOpen;
+
 	public GameObject ChooseTheme;
 
 	// Use this for initialization
@@ -14,7 +16,7 @@ public class AbreGameObject : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	public void AbrirGameObject () {
+	public void AbrirEFecharGameObject () {
 		objectToClose.SetActive (false);
 		objectToOpen.SetActive (true);
 	}
@@ -26,6 +28,15 @@ public class AbreGameObject : MonoBehaviour {
 	public void AbrirObject(){
 		objectToOpen.SetActive (true);
 	}
+
+	public void AbrirBotao(){
+		botaoToOpen.SetActive (true);
+	}
+
+	public void FecharBotao(){
+		botaoToOpen.SetActive (false);
+	}
+
 
 	public void ReturnTheme(){
 		AudioControllerGame.Instance.PlaySound (SoundGames.ButtonSound);
