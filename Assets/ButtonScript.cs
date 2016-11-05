@@ -22,8 +22,7 @@ public class ButtonScript : MonoBehaviour {
 
 	public int respostanum;
 
-	private bool isTapped = false;
-	private bool isClosed = false;
+
 
 	private Quaternion targetRotation;
 
@@ -122,15 +121,12 @@ public class ButtonScript : MonoBehaviour {
 
 		if (tipo == type.resposta) {
 			backGroundZoom.SetActive (true);
-			transform.position = new Vector3 (1.95f, 1.53f, -8.61f);
+			transform.position = new Vector3 (2.7f, 0.65f, -7.67f);
 		} else {
 			return;
 		}
 	}
 
-	private void TapClosed(object sender, EventArgs e){
-
-	}
 
 
 }

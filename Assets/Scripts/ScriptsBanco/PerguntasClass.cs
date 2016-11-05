@@ -11,12 +11,13 @@ public class PerguntasClass : MonoBehaviour {
 	public int rating;
 	public enum Temas {Cinema,Esporte,Radio,Arte,História,Propaganda,Outro};
 	public Temas tema; 
-	public bool minhaMae = false;
+	public Material materialImagem;
 
 
 	public PerguntasClass(
 		string TextoDaPergunta,
 		Temas TemaDaQuestao,
+		Material imagemDaPergunta,
 		string Resposta1Certa,
 		string Curiosidade1,
 		string Resposta2,
@@ -33,6 +34,7 @@ public class PerguntasClass : MonoBehaviour {
 		AudioSource AudioDaQuestao = null)
 	{
 		textoDaPerguntaBd = TextoDaPergunta;
+		materialImagem = imagemDaPergunta;
 		tema = TemaDaQuestao;
 		respostasBd.Add (new RespostasClass (RespostasClass.Estados.Normal,Resposta1Certa,Curiosidade1,true));
 		respostasBd.Add (new RespostasClass (RespostasClass.Estados.Normal,Resposta2,Curiosidade2));

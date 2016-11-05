@@ -29,8 +29,7 @@ public class FlickToOpen : MonoBehaviour {
 		var gesture = sender as FlickGesture;
 
 		if (gesture.ScreenPosition.x < gesture.PreviousScreenPosition.x) {
-			ObjectToClose.SetActive (false);
-			ObjectToOpen.SetActive (true);
+			Debug.Log ("Coloque aqui o Tween");
 		}
 
 	}
