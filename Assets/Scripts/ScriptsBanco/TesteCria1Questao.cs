@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class TesteCria1Questao : MonoBehaviour {
 
 	public GameObject pergunta;
+	public Material[] testeImagem;
 
 
 	// Use this for initialization
@@ -48,6 +49,7 @@ public class TesteCria1Questao : MonoBehaviour {
 			new PerguntasClass(
 				"Emerson Fittipaldi foi em 1972:",
 				PerguntasClass.Temas.Outro,
+				testeImagem[0],
 				"Campeão mundial mais jovem de F1 até então.",
 				"Curiosidade1",
 				"Primeiro e único campeão brasileiro de F1 da história.",
@@ -64,6 +66,7 @@ public class TesteCria1Questao : MonoBehaviour {
 			new PerguntasClass(
 				"Titulo 2",
 				PerguntasClass.Temas.Outro,
+				testeImagem[1],
 				"Campeão mundial mais jovem de F1 até então.",
 				"Curiosidade1",
 				"Primeiro e único campeão brasileiro de F1 da história.",
