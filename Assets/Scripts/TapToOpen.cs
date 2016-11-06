@@ -26,13 +26,23 @@ public class TapToOpen : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
 	void openGameObjectCinema(object sender, EventArgs e){
 		//var gesture = sender as TapGesture;
 
 		Debug.Log ("Coloque o Tween Aqui");
+
+		iTween.MoveTo (Camera.main.gameObject,iTween.Hash(
+			"x", -1.45f,
+			"y", 0.68f,
+			"z", -8.75f,
+			"time", 2,
+			"speed", 2,
+			"looptype", iTween.LoopType.none,
+			"easetype", iTween.EaseType.linear));
+		
 
 		if (tipo == tipoDeTema.Cinema) {
 			QuestionControllScript.Instance.TemaEscolhido = PerguntasClass.Temas.Cinema;
