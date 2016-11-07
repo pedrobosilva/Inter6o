@@ -30,6 +30,15 @@ public class FlickToOpen : MonoBehaviour {
 
 		if (gesture.ScreenPosition.x < gesture.PreviousScreenPosition.x) {
 			Debug.Log ("Coloque aqui o Tween");
+
+			iTween.MoveTo (Camera.main.gameObject, iTween.Hash (
+				"x", 2.15f,
+				"y", 0.19f,
+				"z", -8.45,
+				"time", 2,
+				"speed", 2,
+				"looptype", iTween.LoopType.none,
+				"easetype", iTween.EaseType.linear));
 		}
 
 	}
