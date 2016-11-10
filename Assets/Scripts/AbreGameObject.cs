@@ -5,7 +5,8 @@ public class AbreGameObject : MonoBehaviour {
 
 	public GameObject objectToOpen;
 	public GameObject objectToClose;
-
+	public GameObject objectRating;
+	public GameObject[] objectToClose2;
 	public GameObject botaoToOpen;
 
 	public GameObject ChooseTheme;
@@ -24,6 +25,7 @@ public class AbreGameObject : MonoBehaviour {
 	public void DesabilitarObject(){
 		objectToClose.SetActive (false);
 	}
+		
 
 	public void AbrirObject(){
 		objectToOpen.SetActive (true);
@@ -31,6 +33,16 @@ public class AbreGameObject : MonoBehaviour {
 
 	public void AbrirBotao(){
 		botaoToOpen.SetActive (true);
+	}
+
+	public void AbrirRatingCanvas(){
+		objectRating.SetActive (true);
+		objectToClose.SetActive (false);
+		objectToClose2[0].SetActive (false);
+		objectToClose2[1].SetActive (false);
+		objectToClose2[2].SetActive (false);
+		objectToClose2[3].SetActive (false);
+		objectToClose2[4].SetActive (false);
 	}
 
 	public void FecharBotao(){

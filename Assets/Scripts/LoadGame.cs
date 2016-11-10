@@ -21,6 +21,7 @@ public class LoadGame : MonoBehaviour {
 		SceneManager.LoadScene (1);
 	}
 
+
 	public void LoadAnyScene(){
 		SceneManager.LoadScene (valor);
 	}
