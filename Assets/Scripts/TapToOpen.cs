@@ -32,8 +32,6 @@ public class TapToOpen : MonoBehaviour {
 	void openGameObjectCinema(object sender, EventArgs e){
 		//var gesture = sender as TapGesture;
 
-		Debug.Log ("Coloque o Tween Aqui");
-
 		iTween.MoveTo (Camera.main.gameObject,iTween.Hash(
 			"x", -1.45f,
 			"y", 0.68f,
@@ -42,6 +40,9 @@ public class TapToOpen : MonoBehaviour {
 			"speed", 2,
 			"looptype", iTween.LoopType.none,
 			"easetype", iTween.EaseType.linear));
+
+		QuestionControllScript.Instance.qtdPerguntasTentada = 0;
+
 		
 
 		if (tipo == tipoDeTema.Cinema) {

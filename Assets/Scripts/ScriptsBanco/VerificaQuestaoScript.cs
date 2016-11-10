@@ -3,6 +3,8 @@ using System.Collections;
 
 public class VerificaQuestaoScript : MonoBehaviour {
 
+	public static VerificaQuestaoScript Instance;
+
 	public GameObject CanvasCuriosidade;
 
 	public GameObject Curiosidade0;
@@ -10,9 +12,11 @@ public class VerificaQuestaoScript : MonoBehaviour {
 	public GameObject Curiosidade2;
 	public GameObject Curiosidade3;
 
+	public bool respostaCorreta = false;
+
 	// Use this for initialization
-	void Start () {
-	
+	void Awake () {
+		Instance = this;
 	}
 	
 	// Update is called once per frame
@@ -22,30 +26,54 @@ public class VerificaQuestaoScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider colision){
 		if (colision.name == "Resposta0") {
-			Debug.Log (colision.gameObject.GetComponent<ButtonScript> ().isCorrect);
 			Curiosidade0.SetActive (true);
 			CanvasCuriosidade.SetActive (true);
+
+			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true) {
+				
+				respostaCorreta = true;
+			}
+
+		
 
 		}
 			
 			if (colision.name == "Resposta1") {
-			Debug.Log (colision.gameObject.GetComponent<ButtonScript> ().isCorrect);
+			
 			Curiosidade1.SetActive (true);
 			CanvasCuriosidade.SetActive (true);
+
+			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true) {
+				
+				respostaCorreta = true;
+			}
 		
 			}
 	
 			if (colision.name == "Resposta2") {
-			Debug.Log (colision.gameObject.GetComponent<ButtonScript> ().isCorrect);
+
 			Curiosidade2.SetActive (true);
 			CanvasCuriosidade.SetActive (true);
+
+			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true) {
+				
+				respostaCorreta = true;
+
+			}
+
 
 			}
 
 			if (colision.name == "Resposta3") {
-			Debug.Log (colision.gameObject.GetComponent<ButtonScript> ().isCorrect);
+			
 			Curiosidade3.SetActive (true);
 			CanvasCuriosidade.SetActive (true);
+
+			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true) {
+				
+				respostaCorreta = true;
+			}
+
 
 			}
 	}

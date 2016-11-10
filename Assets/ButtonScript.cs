@@ -22,7 +22,10 @@ public class ButtonScript : MonoBehaviour {
 
 	public int respostanum;
 
-
+	public AudioClip audioCuriosisidade;
+	public AudioClip audioDaPergunta;
+	public AudioClip audioDasAlternativas;
+	public AudioSource audioSource;
 
 	private Quaternion targetRotation;
 
@@ -41,8 +44,6 @@ public class ButtonScript : MonoBehaviour {
 	{
 
 		posicaoInitial = new Vector3 (transform.position.x, transform.position.y, -7);
-
-	
 
 	}
 
@@ -87,6 +88,7 @@ public class ButtonScript : MonoBehaviour {
 
 			AnswerText.text = GameControl.gControl.perguntasList [1].respostasBd [respostanum].textoDaResposta;
 		}
+
 	}
 
 
@@ -121,7 +123,7 @@ public class ButtonScript : MonoBehaviour {
 
 		if (tipo == type.resposta) {
 			backGroundZoom.SetActive (true);
-			transform.position = new Vector3 (2.7f, 0.65f, -7.67f);
+			transform.position = new Vector3 (2.87f, 0.77f, -7.59f);
 		} else {
 			return;
 		}

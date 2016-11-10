@@ -45,7 +45,7 @@ public class TesteCria1Questao : MonoBehaviour {
 
 	public void CriaQuestao()
 	{
-		GameControl.gControl.perguntasList.Add(
+		/*GameControl.gControl.perguntasList.Add(
 			new PerguntasClass(
 				"Emerson Fittipaldi foi em 1972:",
 				PerguntasClass.Temas.Outro,
@@ -79,6 +79,7 @@ public class TesteCria1Questao : MonoBehaviour {
 				"Curiosidade5",
 				"Venceu a corrida de Inauguração do autódromo de interlagos.",
 				"Curiosidade6"));
+				*/
 		
 		//Debug.Log(GameControl.gControl.perguntasList [0].respostasBd [2].textoDaResposta);
 		//Debug.Log(GameControl.gControl.perguntasList [0].respostasBd [2].correta);
