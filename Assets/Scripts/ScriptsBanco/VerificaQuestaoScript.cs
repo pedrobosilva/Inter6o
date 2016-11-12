@@ -28,6 +28,8 @@ public class VerificaQuestaoScript : MonoBehaviour {
 		if (colision.name == "Resposta0") {
 			Curiosidade0.SetActive (true);
 			CanvasCuriosidade.SetActive (true);
+			colision.gameObject.GetComponent<ButtonScript> ().goFlick = false;
+			colision.gameObject.GetComponent<ButtonScript> ().VoltarAPosicaoInicial();
 
 			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true) {
 				
@@ -42,6 +44,8 @@ public class VerificaQuestaoScript : MonoBehaviour {
 			
 			Curiosidade1.SetActive (true);
 			CanvasCuriosidade.SetActive (true);
+			colision.gameObject.GetComponent<ButtonScript> ().goFlick = false;
+			colision.gameObject.GetComponent<ButtonScript> ().VoltarAPosicaoInicial();
 
 			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true) {
 				
@@ -54,6 +58,8 @@ public class VerificaQuestaoScript : MonoBehaviour {
 
 			Curiosidade2.SetActive (true);
 			CanvasCuriosidade.SetActive (true);
+			colision.gameObject.GetComponent<ButtonScript> ().goFlick = false;
+			colision.gameObject.GetComponent<ButtonScript> ().VoltarAPosicaoInicial();
 
 			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true) {
 				
@@ -68,6 +74,8 @@ public class VerificaQuestaoScript : MonoBehaviour {
 			
 			Curiosidade3.SetActive (true);
 			CanvasCuriosidade.SetActive (true);
+			colision.gameObject.GetComponent<ButtonScript> ().goFlick = false;
+			colision.gameObject.GetComponent<ButtonScript> ().VoltarAPosicaoInicial();
 
 			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true) {
 				
