@@ -32,6 +32,9 @@ public class ButtonScript : MonoBehaviour {
 	private Vector3 posicaoInitial;
 	private Vector3 scaleInitial;
 
+	public bool goFlick = false;
+	public bool goFlickCuriosidade = false;
+
 	private void Awake()
 	{
 		Instance = this;
@@ -53,27 +56,24 @@ public class ButtonScript : MonoBehaviour {
 			GetComponent<TapGesture> ().Tapped += TapAction;
 	
 		
-		
+		GetComponent<FlickGesture> ().Flicked += FlickButton;
 
-		GetComponent<PanGesture> ().PanStarted += PanStartAction;
-		GetComponent<PanGesture> ().Panned += PanWhileAction;
-		GetComponent<PanGesture> ().PanCompleted += PanCompleteAction;
+		//GetComponent<PanGesture> ().PanStarted += PanStartAction;
+		//GetComponent<PanGesture> ().Panned += PanWhileAction;
+		//GetComponent<PanGesture> ().PanCompleted += PanCompleteAction;
 	}
 
 	private void OnDisable()
 	{
 		GetComponent<TapGesture>().Tapped -= TapAction;
 
+		GetComponent<FlickGesture> ().Flicked -= FlickButton;
+
 		GetComponent<PanGesture> ().PanStarted -= PanStartAction;
 		GetComponent<PanGesture> ().Panned -= PanWhileAction;
 		GetComponent<PanGesture> ().PanCompleted -= PanCompleteAction;
 	}
 
-
-	void FixedUpdate()
-	{
-		
-	}
 
 	public void SetQuestion(){
 		
@@ -89,6 +89,29 @@ public class ButtonScript : MonoBehaviour {
 			AnswerText.text = GameControl.gControl.perguntasList [1].respostasBd [respostanum].textoDaResposta;
 		}
 
+	}
+
+	private void FlickButton(object sender, EventArgs e){
+		
+		var gesture = sender as FlickGesture;
+
+		if (tipo == type.resposta && gesture.ScreenPosition.y > gesture.PreviousScreenPosition.y) {
+			transform.position = new Vector3(transform.position.x, transform.position.y, -7.1f);
+			Debug.Log ("Colocar o iTween aqui");
+			// Não vai precisar do GoFlick = true, tira a linha que depois eu arrumo certinho.
+			goFlick = true;
+		}
+
+		if (tipo == type.resposta && gesture.ScreenPosition.y < gesture.PreviousScreenPosition.y) {
+			backGroundZoom.SetActive (false);
+			transform.position = posicaoInitial;
+		}
+
+		if (tipo == type.curiosidade && gesture.ScreenPosition.y > gesture.PreviousScreenPosition.y) {
+			Debug.Log ("Colocar o iTween aqui");
+			// não vai precisar do goflickCuriosidade = true tira a linha que depois eu arrumo certinho.
+			goFlickCuriosidade = true;
+		}
 	}
 
 
@@ -108,14 +131,34 @@ public class ButtonScript : MonoBehaviour {
 	{
 		
 
+
+	}
+
+	public void VoltarAPosicaoInicial(){
 		transform.position = posicaoInitial;
 	}
 
 	void Update ()
 	{
+		if (goFlick == true) {
 
 
-		transform.localRotation = Quaternion.Lerp(transform.localRotation, targetRotation, .1f);
+
+			transform.Translate (new Vector3 (0,0,-0.02f));
+			backGroundZoom.SetActive (false);
+		}
+			
+		if (goFlickCuriosidade == true) {
+
+		
+			// apagar a linha do Translate. 
+
+			transform.Translate (new Vector3 (0,0,0.02f));
+			backGroundZoom.SetActive (false);
+		}
+
+
+		//transform.localRotation = Quaternion.Lerp(transform.localRotation, targetRotation, .1f);
 	}
 
 	private void TapAction(object sender, EventArgs e)

@@ -330,12 +330,12 @@ public class QuestionControllScript : MonoBehaviour {
 		if (GrupoVSGrupoGame == true) {
 			if (vezVermelho) {
 				PontosVermelho -= 10;
-				Debug.Log (PontosVermelho);
+				//Debug.Log (PontosVermelho);
 			}
 
 			if (vezAzul) {
 				PontosAzul -= 10;
-				Debug.Log (PontosAzul);
+				//Debug.Log (PontosAzul);
 			}
 		}
 	}
@@ -443,7 +443,7 @@ public class QuestionControllScript : MonoBehaviour {
 					GameControl.gControl.perguntasList[i].tentada = false;
 				}
 			}
-			Debug.Log ("correcao");
+			//Debug.Log ("correcao");
 
 		}
 	
@@ -456,21 +456,21 @@ public class QuestionControllScript : MonoBehaviour {
 
 
 			if (!GameControl.gControl.perguntasList [randomNumber].tentada) {
-				Debug.Log ("OK");
+				//Debug.Log ("OK");
 				selecao = true;
 			}
 		}
 		if (iterations > 1000) {
-			Debug.Log ("Bug Splash");
+			//Debug.Log ("Bug Splash");
 		
-			Debug.Log("Tema Escolhido pelo jogador:" + TemaEscolhido);
-			Debug.Log("Tema da Pergunta" + GameControl.gControl.perguntasList[randomNumber].tema);
-			Debug.Log("Quantidade de perguntas do tema:" + qtdPerguntaTema);
-			Debug.Log("Quantidade em que ela foi tentada:" + qtdPerguntasTentada);
+			//Debug.Log("Tema Escolhido pelo jogador:" + TemaEscolhido);
+			//Debug.Log("Tema da Pergunta" + GameControl.gControl.perguntasList[randomNumber].tema);
+			//Debug.Log("Quantidade de perguntas do tema:" + qtdPerguntaTema);
+			//Debug.Log("Quantidade em que ela foi tentada:" + qtdPerguntasTentada);
 			selecao = true;
 			UnityEditor.EditorApplication.isPlaying = false;
 		}
-		Debug.Log(GameControl.gControl.perguntasList[randomNumber].tentada);
+		//Debug.Log(GameControl.gControl.perguntasList[randomNumber].tentada);
 	}
 
 	public void SetQuestion(){

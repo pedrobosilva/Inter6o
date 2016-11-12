@@ -99,6 +99,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 	void OnTriggerEnter(Collider colision){
 		if (colision.name == "Curiosidade0") {
 			if (VerificaQuestaoScript.Instance.respostaCorreta == true) {
+				Curiosidade0.GetComponent<ButtonScript> ().goFlickCuriosidade = false;
 				Curiosidade0.transform.position = initialCuriosidade0;
 				Curiosidade0.SetActive (false);
 				CanvasCuriosidade.SetActive (false);
@@ -112,6 +113,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 
 
 			} else {
+				Curiosidade0.GetComponent<ButtonScript> ().goFlickCuriosidade = false;
 				Curiosidade0.transform.position = initialCuriosidade0;
 				Curiosidade0.SetActive (false);
 				CanvasCuriosidade.SetActive (false);
@@ -127,6 +129,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 
 		if (colision.name == "Curiosidade1") {
 			if (VerificaQuestaoScript.Instance.respostaCorreta == true) {
+				Curiosidade1.GetComponent<ButtonScript> ().goFlickCuriosidade = false;
 				Curiosidade1.transform.position = initialCuriosidade0;
 				Curiosidade1.SetActive (false);
 				CanvasCuriosidade.SetActive (false);
@@ -137,6 +140,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 				VerificaQuestaoScript.Instance.respostaCorreta = false;
 				Curiosidade1.GetComponent<PlaySound1> ().StopSound ();
 			} else {
+				Curiosidade1.GetComponent<ButtonScript> ().goFlickCuriosidade = false;
 				Curiosidade1.transform.position = initialCuriosidade0;
 				Curiosidade1.SetActive (false);
 				CanvasCuriosidade.SetActive (false);
@@ -152,6 +156,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 
 		if (colision.name == "Curiosidade2") {
 			if (VerificaQuestaoScript.Instance.respostaCorreta == true) {
+				Curiosidade2.GetComponent<ButtonScript> ().goFlickCuriosidade = false;
 				Curiosidade2.transform.position = initialCuriosidade0;
 				Curiosidade2.SetActive (false);
 				CanvasCuriosidade.SetActive (false);
@@ -162,6 +167,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 				VerificaQuestaoScript.Instance.respostaCorreta = false;
 				Curiosidade2.GetComponent<PlaySound1> ().StopSound ();
 			} else {
+				Curiosidade2.GetComponent<ButtonScript> ().goFlickCuriosidade = false;
 				Curiosidade2.transform.position = initialCuriosidade0;
 				Curiosidade2.SetActive (false);
 				CanvasCuriosidade.SetActive (false);
@@ -177,6 +183,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 
 		if (colision.name == "Curiosidade3") {
 			if (VerificaQuestaoScript.Instance.respostaCorreta == true) {
+				Curiosidade3.GetComponent<ButtonScript> ().goFlickCuriosidade = false;
 				Curiosidade3.transform.position = initialCuriosidade0;
 				Curiosidade3.SetActive (false);
 				CanvasCuriosidade.SetActive (false);
@@ -187,6 +194,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 				VerificaQuestaoScript.Instance.respostaCorreta = false;
 				Curiosidade3.GetComponent<PlaySound1> ().StopSound ();
 			} else {
+				Curiosidade3.GetComponent<ButtonScript> ().goFlickCuriosidade = false;
 				Curiosidade3.transform.position = initialCuriosidade0;
 				Curiosidade3.SetActive (false);
 				CanvasCuriosidade.SetActive (false);
@@ -201,6 +209,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 		}
 
 		if (colision.name == "Curiosidade0" && verificarCuriosidades == true) {
+			Curiosidade0.GetComponent<ButtonScript> ().goFlickCuriosidade = false;
 			Curiosidade0.transform.position = initialCuriosidade0;
 			Curiosidade0.SetActive (false);
 			CanvasCuriosidade.SetActive (false);
@@ -211,6 +220,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 		}
 
 		if (colision.name == "Curiosidade1" && verificarCuriosidades == true) {
+			Curiosidade1.GetComponent<ButtonScript> ().goFlickCuriosidade = false;
 			Curiosidade1.transform.position = initialCuriosidade0;
 			Curiosidade1.SetActive (false);
 			CanvasCuriosidade.SetActive (false);
@@ -221,6 +231,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 		}
 
 		if (colision.name == "Curiosidade2" && verificarCuriosidades == true) {
+			Curiosidade2.GetComponent<ButtonScript> ().goFlickCuriosidade = false;
 			Curiosidade2.transform.position = initialCuriosidade0;
 			Curiosidade2.SetActive (false);
 			CanvasCuriosidade.SetActive (false);
@@ -231,6 +242,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 		}
 
 		if (colision.name == "Curiosidade3" && verificarCuriosidades == true) {
+			Curiosidade3.GetComponent<ButtonScript> ().goFlickCuriosidade = false;
 			Curiosidade3.transform.position = initialCuriosidade0;
 			Curiosidade3.SetActive (false);
 			CanvasCuriosidade.SetActive (false);
