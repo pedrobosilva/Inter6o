@@ -91,6 +91,7 @@ public class ButtonScript : MonoBehaviour {
 
 	}
 
+
 	private void FlickButton(object sender, EventArgs e){
 		
 		var gesture = sender as FlickGesture;
@@ -98,8 +99,16 @@ public class ButtonScript : MonoBehaviour {
 		if (tipo == type.resposta && gesture.ScreenPosition.y > gesture.PreviousScreenPosition.y) {
 			transform.position = new Vector3(transform.position.x, transform.position.y, -7.1f);
 			Debug.Log ("Colocar o iTween aqui");
+			iTween.MoveTo (gameObject, iTween.Hash (
+				"y", 1.5f,
+				"speed", 0.5f,
+				"easetype", iTween.EaseType.easeOutQuint));
+
+			/*iTween.RotateBy (gameObject, iTween.Hash (
+				"z", 20));*/
+
 			// Não vai precisar do GoFlick = true, tira a linha que depois eu arrumo certinho.
-			goFlick = true;
+			//goFlick = true;
 		}
 
 		if (tipo == type.resposta && gesture.ScreenPosition.y < gesture.PreviousScreenPosition.y) {
