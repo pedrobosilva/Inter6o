@@ -7,6 +7,8 @@ public class ButtonScript : MonoBehaviour {
 
 	public static ButtonScript Instance;
 
+	public bool Ctrl_Verific = false;
+
 	public bool isCorrect = false;
 	public Text AnswerText;
 	public Text QuestionText;
@@ -45,6 +47,7 @@ public class ButtonScript : MonoBehaviour {
 
 	void Start()
 	{
+
 
 		posicaoInitial = new Vector3 (transform.position.x, transform.position.y, -7);
 
@@ -91,6 +94,7 @@ public class ButtonScript : MonoBehaviour {
 
 	}
 
+
 	private void FlickButton(object sender, EventArgs e){
 		
 		var gesture = sender as FlickGesture;
@@ -98,8 +102,23 @@ public class ButtonScript : MonoBehaviour {
 		if (tipo == type.resposta && gesture.ScreenPosition.y > gesture.PreviousScreenPosition.y) {
 			transform.position = new Vector3(transform.position.x, transform.position.y, -7.1f);
 			Debug.Log ("Colocar o iTween aqui");
+
+			iTween.MoveTo (gameObject.transform.parent.gameObject, iTween.Hash (
+				"y", 1,
+				"speed", 0.5f,
+				"easetype", iTween.EaseType.easeOutQuint
+				));	
+
+			//"oncomplete", Ctrl_Verific = true
+
+			iTween.RotateBy (gameObject.transform.parent.gameObject, iTween.Hash (
+				"z", 10
+				));
+
+
+
 			// Não vai precisar do GoFlick = true, tira a linha que depois eu arrumo certinho.
-			goFlick = true;
+			//goFlick = true;
 		}
 
 		if (tipo == type.resposta && gesture.ScreenPosition.y < gesture.PreviousScreenPosition.y) {
@@ -140,6 +159,9 @@ public class ButtonScript : MonoBehaviour {
 
 	void Update ()
 	{
+		
+
+
 		if (goFlick == true) {
 
 
