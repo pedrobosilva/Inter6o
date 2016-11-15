@@ -97,6 +97,7 @@ public class ButtonScript : MonoBehaviour {
 
 		if (tipo == type.resposta && gesture.ScreenPosition.y > gesture.PreviousScreenPosition.y) {
 			transform.position = new Vector3(transform.position.x, transform.position.y, -7.1f);
+
 			Debug.Log ("Colocar o iTween aqui");
 			// Não vai precisar do GoFlick = true, tira a linha que depois eu arrumo certinho.
 			goFlick = true;
