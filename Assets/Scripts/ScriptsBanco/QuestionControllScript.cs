@@ -64,6 +64,8 @@ public class QuestionControllScript : MonoBehaviour {
 	public AudioClip[] audioDasCuriosidadeCinema;
 	public AudioClip[] audioDasCuriosidadePropaganda;
 	public AudioClip[] audioDasCuriosidadesHistoria;
+	public AudioClip[] audioDasCuriosidadesRadio;
+
 	private int perguntaInicial = 0;
 
 	bool selecao = false;
@@ -246,6 +248,521 @@ public class QuestionControllScript : MonoBehaviour {
 
 		//GameControl.gControl.perguntasList [1].respostasBd [2].correta = true;
 
+		#region "Perguntas sem Material e Áudio"
+		/*
+		//PERGUNTAS DE ARTE -------------------------------------------------------------------------
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Em 1969 Chico Buarque de Holanda, já com 25 anos, buscou refúgio na Itália devido à crescente repressão do regime militar do Brasil os chamados “anos de chumbo”, contudo nessa época já havia produzido a música “A Banda” e com isso:",
+				PerguntasClass.Temas.Arte,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Ganhou o festival de música popular brasileira",
+				"Chico Buarque revelou-se ao público brasileiro quando ganhou o mesmo Festival, no ano seguinte (1966), transmitido pela TV Record, com A Banda, interpretada por Nara Leão (empatou em primeiro lugar com Disparada, de Geraldo Vandré, interpretada por Jair Rodrigues).No entanto, Zuza Homem de Mello, no livro A Era dos Festivais: Uma Parábola, revelou que “A Banda” venceu o festival.",
+				audioDasCuriosidadeArte[0],
+				"Teve suas canções “Apesar de você” e “Cálice” censuradas pelo regime militar",
+				"A música “Apesar de você” foi vista pelo regime como uma alusão negativa ao presidente Médici, apesar de Chico Buarque afirmar que era sobre a situação atual 'na época', já “Cálice” foi censurada  devido ao cacófato que ocorre com a frase “Cale-se!”. Fato que incentivou o cantor a adotar o pseudônimo de Julinho da Adelaide para compositor",
+				audioDasCuriosidadeArte[0],
+				"Se tornou um dos artistas mais ativos na crítica política e na luta pela democratização no país",
+				"De fato isso ocorreu mas foi depois 1970, após seu retorno da Itália e com as música “Cálice” e “Apesar de você”",
+				audioDasCuriosidadeArte[0],
+				"Artista foi homenageado no desfile das escolas de samba do Rio de Janeiro",
+				"Em 1998, pela GRES Estação Primeira de Mangueira,o artista foi homenageado, no enredo “Chico Buarque da Mangueira”. A escola verde e rosa dividiu o título de campeã daquele carnaval com a Beija-Flor de Nilópolis.",
+				audioDasCuriosidadeArte[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"A qual movimento artístico pertence a seguinte obra?",
+				PerguntasClass.Temas.Arte,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Arte conceitual",
+				"A arte conceitual teve sua origem na obra de Duchamp, no episódio no qual enviou um mictório para um salão de arte,sob o título “A Fonte”, o artista inaugurou contra a sua própria vontade, um novo movimento artístico  na qual a idéia é o mais importante da obra.",
+				audioDasCuriosidadeArte[0],
+				"Expressionismo",
+				"Expressionismo que teve seu auge no final do século XIX e início do século XX.Sem preocupação com a beleza ou com os padrões.O período em que se desenvolveu esse movimento artísticos foi muito conturbado. Cenário da primeira guerra mundial. A pintura “O Grito” é o melhor exemplo do estilo artístico denominado Expressionismo.",
+				audioDasCuriosidadeArte[0],
+				"Naturalismo",
+				"Naturalismo é conhecido por ser a radicalização do Realismo, baseando-se na observação fiel da realidade e na experiência, mostrando que o indivíduo é determinado pelo ambiente e pela hereditariedade. O movimento esboçou o que se pode declarar como os primeiros passos do pensamento teórico evolucionista de Charles Darwin.",
+				audioDasCuriosidadeArte[0],
+				"Simbolismo",
+				"Simbolismo é um movimento literário da poesia e das outras artes que surgiu na França, no final do século XIX, como oposição ao realismo, ao naturalismo e ao positivismo da época. Movido pelos ideais românticos, teve suas origens de “As Flores do Mal”, do poeta Charles Baudelaire.",
+				audioDasCuriosidadeArte[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Quem foi o autor do quadro “Criança Morta”?",
+				PerguntasClass.Temas.Arte,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Candido Portinari",
+				"Candido Portinari realizou cerca de 4.500 obras em 40 anos de trabalho , só cursou o primário. Quando ainda estava na escola, Portinari desenhou um leão em sala de aula. A obra foi tão adorada que ele foi obrigado a desenhar a capa de todas as provas que seriam expostas no final de ano. Aos 9 anos pintou o teto da igreja de sua cidade.",
+				audioDasCuriosidadeArte[0],
+				"Lasar Segall",
+				"Lasar Segall nasceu na Lituânia. Em 1912 veio ao Brasil,deu aulas de desenho à jovem Jenny Klabin,com quem iria se casar doze anos mais tarde. No final daquele voltou à Europa   e conheceu Margarete Quack, com quem se casou no fim Primeira Guerra teve.Lasar e Margarete voltam ao Brasil. Um ano depois, em 1924, se separou e se casou com Jenny Klabin, sua ex-aluna.",
+				audioDasCuriosidadeArte[0],
+				"Tarsila do Amaral",
+				"Foi considerada a pintora mais representativa da primeira fase do Modernismo no Brasil e recebeu o Prêmio de Pintura Nacional na I Bienal de São Paulo, em 1951. A pintora costumava levar cachaça brasileira em suas viagens ao exterior. Ela enganava os funcionários da alfândega dizendo que era álcool para “passar na pele”.",
+				audioDasCuriosidadeArte[0],
+				"Romero Britto",
+				"Romero Britto é um artista plástico brasileiro de grande renome internacional, radicado nos Estados Unidos, Além das celebridades norte-americanas, Britto também produziu telas para Bill Clinton, o príncipe William, Kate Middleton, Pelé, Roberto Marinho e para a ex-Presidente do país, Dilma Rousseff.",
+				audioDasCuriosidadeArte[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Quem foi o autor do quadro “A ventania”?",
+				PerguntasClass.Temas.Arte,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Anita Malfatti",
+				"Anita Malfatti é considerada a primeira representante do modernismo no Brasil. Aos 19 anos se formou como professora pela escola normal. Foi casada com Mário de Andrade, que participaram juntos do chamado  “Grupo dos Cinco” que era composto por, Tarsila do Amaral, Anita Malfatti, Mário de Andrade, Oswald de Andrade e Menotti Del Picchia.",
+				audioDasCuriosidadeArte[0],
+				"Van Gogh",
+				"Um mês antes de sua morte,Van Gogh pintava uma tela por dia, foi quando pintou “Campo de Trigo com Corvo”, obra que expressava toda a tristeza e solidão. No dia 27 de julho de 1890, Vincent Wilen Van Gogh caminhou até o campo frente ao lugar em que morava e deu um tiro contra o próprio peito.Tendo vendido apenas uma única tela, morreu sem saber que seus quadros estariam, algum dia, entre os mais caros do mundo.",
+				audioDasCuriosidadeArte[0],
+				"Claude Monet",
+				"O jovem Monet não gostava de ir à escola e tinha a mania de usar os cadernos para fazer desenhos,  já vendia seus desenhos e caricaturas nas ruas aos 15 anos de idade. Com a morte da mãe, Monet abandonou a escola. Na época, o pintor tinha apenas 16 anos.",
+				audioDasCuriosidadeArte[0],
+				"Edvard Munch",
+				"Na obra “o Grito”, o personagem atormentado e disforme que emite este pedido de socorro agonizante é o próprio pintor. Ele se encontrava com uns amigos em uma colina perto de Oslo, de onde se vê toda a cidade, a Colina de Ekeberg, quando sofreu um ataque de pânico.",
+				audioDasCuriosidadeArte[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		//PERGUNTAS DE CINEMA-------------------------------------------------------------
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Qual era o nome do gato da personagem interpretada pela Audrey Hepburn no filme “Bonequinha de Luxo”?",
+				PerguntasClass.Temas.Cinema,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Gato",
+				"Holly (Personagem interpretada por Audrey Hepburn) acredita que assim como ela seu gato não está realmente se sentindo em casa, por esse motivo ela não lhe deu um nome e o chama simplesmente de Gato.",
+				audioDasCuriosidadeCinema[0],
+				"Lassie",
+				"Lassie é considerada “a cadela mais famosa do mundo” e realmente ela merece esse título, a cadelinha atuou em mais de oito filmes e cinco séries de TV, ela é tão famosa que é um dos três animais que foram homenageados na Calçada da Fama em Hollywood, ao lado de Rin Tin Tin e Strongheart.",
+				audioDasCuriosidadeCinema[0],
+				"Rinty",
+				"Rinty ou como era mais conhecido Rin Tin Tin foi um famoso cachorro da década de 1920 e que continuou fazendo sucesso por muitos anos depois de seu lançamento, participou de vários programas de TV e de rádio, sempre fazendo o papel de um cachorro valente e destemido.",
+				audioDasCuriosidadeCinema[0],
+				"Orangey",
+				"Orangey é o verdadeiro nome do gato fora das telonas, ele é literalmente considerado uma celebridade e tem uma página dedicada exclusivamente para ele na internet.",
+				audioDasCuriosidadeCinema[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"“Três Homens em conflito” (1966), também conhecido como “O Bom, O Mau e O Feio” era o último filme da trilogia dos dólares de Sergio Leone, quais eram os outros dois filmes da trilogia?",
+				PerguntasClass.Temas.Cinema,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"“Por um punhado de dólares” (1964) e “Por uns dólares a mais” (1965)",
+				"A trilogia dos dólares era também conhecida por “Trilogia do Pistoleiro sem nome” pois fazia referência ao personagem de Clint Eastwood. Os Filmes de Leone ficaram extremamente conhecidos pela trilha sonora marcante, que até hoje é reconhecida como um ícone dos filmes de Bang Bang.",
+				audioDasCuriosidadeCinema[0],
+				"“Era uma vez no Oeste” (1968) e “Rastros de Odio” (1959)",
+				"“Era uma vez no Oeste” também era um filme de Sergio Leone, aonde o mesmo pretendia apresentar os três protagonistas de “Três Homens em Conflito” logo no começo do filme, porém a ideia foi abandonada, já que o filme não faz parte da trilogia e por Clint Eastwood na época não estar disponível.  Já “Rastros de Ódio” era um filme de John Ford, que tinha como protagonista e ator principal John Wayne, que também foi um dos grandes ícones dos filmes de Faroeste.",
+				audioDasCuriosidadeCinema[0],
+				"“Sete homens e um destino” (1960) e “Um pistoleiro chamado Papaco” (1986)",
+				"“Sete homens e um destino” dirigido por John Sturges, é um clássico dos filmes de Faroeste, inspirado em um filme japonês ele fez muito sucesso na época em que foi lançado, fazendo com que fossem criados vários seriados e filmes nos anos após seu lançamento. Mais atualmente um remake do filme foi feito. Já “Um pistoleiro chamado Papaco” era um filme brasileiro do gênero de “pornochanchada”, que chamou a atenção por ser um dos primeiros do gênero e ter um humor voltado para o erotismo, coisa que não era muito comum na época.",
+				audioDasCuriosidadeCinema[0],
+				"“El Dorado” (1966) e “Onde começa o Inferno” (1959)",
+				"“El Dorado” e “Onde começa o Inferno” (Também conhecido como “Rio Bravo”) eram ambos filmes do diretor Howard Hawks e ambos interpretados por John Wayne com o papel principal. Além da música de “Rio Bravo” ser uma adaptação de um outro filme da dupla Howard e John, os dois filmes citados são extremamente semelhantes em seus roteiros, porém Howard nunca assumiu que houve qualquer tipo de inspiração.",
+				audioDasCuriosidadeCinema[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Qual das seguintes informações sobre o filme “2001: Uma odisseia no espaço”, é falsa?",
+				PerguntasClass.Temas.Cinema,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"A trilha sonora do filme foi feita pela banda “Pink Floyd”",
+				"A banda faria a trilha sonora do filme, porém, essa colaboração acabou não acontecendo. Porém, assim como existe o rumor de que o álbum “Darkside of the Moon” da banda “Pink Floyd” sincroniza perfeitamente com o filme “Mágico de Oz”, também existe o rumor de que a música “Echoes”, que tem mais de 23 minutos, do álbum “Meddle” dessa mesma banda sincroniza perfeitamente com a sequência final do filme chamada, “Jupiter e além do infinito”.",
+				audioDasCuriosidadeCinema[0],
+				"O filme tem 88 minutos sem diálogo algum",
+				"O filme tem 2 horas e 41 minutos de duração e nos primeiros 25 minutos e últimos 23 não possuem falas, ao somar essas duas grandes sequências mais algumas pequenas cenas, o filme tem um total de 88 minutos de silêncio dos personagens. A primeira personagem a falar no filme aos 23:38 minutos é a comissária de bordo.",
+				audioDasCuriosidadeCinema[0],
+				"As cenas na lua foram feitas com areia",
+				"Para criar um efeito que parecesse que os personagens estavam na superfície da lua, o diretor, Stanley Kubrick, mandou importar, lavar e pintar centenas de toneladas de areia.",
+				audioDasCuriosidadeCinema[0],
+				"Originalmente os “Primeiros Homens” seriam homens nus",
+				"A primeira ideia do diretor Stanley Kubrick foi que os primeiros homens fossem humanos, porém, a maquiagem que foi criada, exigia que os atores ficassem nus, o que levaria o filme a ter uma censura +18. Dessa maneira, Kubrick adotou pelo visual dos macacos. Com exceção dos filhotes de chimpanzé, todos os personagens foram interpretados por seres humanos fantasiados.",
+				audioDasCuriosidadeCinema[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Qual dos seguintes filmes é baseado em um romance da vida real?",
+				PerguntasClass.Temas.Cinema,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Bonnie e Clyde - Uma rajada de balas",
+				"Esse filme de 1967, é baseado no casal de assaltantes e assassinos Bonnie Parker e Clyde Barrow. O filme é o 27° na lista de 100 maiores filmes de todos os tempos, e na lista de 100 frases mais famosas do cinema, está em 41° com a frase: “nós roubamos bancos”",
+				audioDasCuriosidadeCinema[0],
+				"Romeu e Julieta",
+				"Esse filme de 1968 é baseado na peça teatral “Romeu e Julieta” de William Shakespeare. Venceu no Oscar de 1969 nas categorias de melhor fotografia e melhor figurino, também foi indicado para melhor filme e melhor diretor.",
+				audioDasCuriosidadeCinema[0],
+				"A primeira noite de um homem",
+				"Esse filme de 1967 é baseado em um livro com o mesmo nome. Venceu o prêmio de melhor direção, no Oscar de 1968. O filme iniciou a carreira de Dustin Hoffman, ator de filmes como “Rain Man”, “Perfume: A História de um Assassino” e “Perdidos na Noite”.",
+				audioDasCuriosidadeCinema[0],
+				"Noivo neurótico, noiva nervosa",
+				"Esse filme de 1977 teve um roteiro original, não foi baseado em nada que já tenha existido. Ganhou no Oscar de 1978, os prêmios de melhor filme, melhor diretor, melhor atriz e melhor roteiro original.",
+				audioDasCuriosidadeCinema[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		// PERGUNTAS DE ESPORTES -------------------------------------------------------------------------------
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Emerson Fittipaldi foi em 1972 na Fórmula 1:",
+				PerguntasClass.Temas.Esporte,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Campeão mundial mais jovem de F1 até então",
+				"Em 1972, com 5 vitórias, Fittipaldi tornou-se o campeão mundial mais jovem da história da Fórmula 1, com 25 anos, oito meses e 29 dias, recorde que manteve por mais de três décadas e que só foi quebrado em 2005, pelo piloto espanhol Fernando Alonso.",
+				audioDasCuriosidadeEsporte[0],
+				"Primeiro e único campeão brasileiro de F1 da história",
+				"Emerson Fittipaldi foi de fato o primeiro campeão brasileiro de F1 da história, entretanto não foi o único seguido por Nelson Piquet (81,83 e 87) e Ayrton Senna (88,90 e 91).",
+				audioDasCuriosidadeEsporte[0],
+				"Campeão das 500 milhas de Indianápolis",
+				"Aos 38 anos, Emerson reafirmava seu talento e assinou com a Patrick Racing para disputar regularmente o campeonato da CART de Fórmula Indy. Em 5 anos ele obteve 6 vitórias. Em 1989, após 5 vitórias, ele se tornou o primeiro brasileiro campeão da categoria. Sua mais expressiva e histórica vitória foi a mítica 500 milhas de Indianapolis, quando liderou 158 das 200 voltas.",
+				audioDasCuriosidadeEsporte[0],
+				"Encerrou sua carreira após um acidente no michigan speedway",
+				"Em 1993 ganhou a sua segunda 500 Milhas de Indianapolis superando o campeão da Fórmula 1 de 1992, Nigel Mansell. Emerson comemorou tomando suco de laranja em lugar do tradicional copo de leite, como forma de promover o produto de suas fazendas. Emerson encerrou sua participação na categoria em 1996, depois de um grave acidente no Michigan International Speedway",
+				audioDasCuriosidadeEsporte[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Qual time foi vencedor do campeonato Paulista de 1973?",
+				PerguntasClass.Temas.Esporte,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Nenhum dos anteriores",
+				"Santos com 32 pontos e Portuguesa com 29, foram os dois times vencedores. O árbitro Armando Marquês, errou na contagem de pênaltis e acabou o jogo com 2x0 para o Santos porém, a Portuguesa ainda tinha suas duas cobranças mas o juiz só percebeu o erro quando os jogadores foram embora. Dessa maneira, a Federação Paulista de Futebol declarou os dois times vencedores. O melhor marcador do campeonato foi Pelé, do Santos, com 11 gols.",
+				audioDasCuriosidadeEsporte[0],
+				"Palmeiras",
+				"O palmeiras ficou em 3° lugar no campeonato com 30 pontos ganhos. Em 1973, o time foi bicampeão do campeonato Brasileiro.",
+				audioDasCuriosidadeEsporte[0],
+				"Corinthians",
+				"O Corinthians ficou em 4° lugar no campeonato com 28 pontos ganhos. No ano de 1973, o time foi campeão do 2° torneio “Laudo Natel”, esse torneio aconteceu em 1972, 73 e 75 e foi criado para que os clubes do interior pudessem jogar com os grandes times paulistas.",
+				audioDasCuriosidadeEsporte[0],
+				"São Paulo",
+				"O time ficou em 8° lugar no campeonato Paulista com 21 pontos ganhos. O São Paulo foi o time vice campeão do campeonato Brasileiro de 1973.",
+				audioDasCuriosidadeEsporte[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+			
+		// PERGUNTAS DE HISTORIA ----------------------------------------------------------------------------------------------
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"O que aconteceu no ano de 1961?",
+				PerguntasClass.Temas.História,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Primeiro homem a entrar no espaço",
+				"Em 12 de abril de 1961, o russo Yuri Gagarin se tornou o primeiro homem a entrar no espaço. O astronauta possuía apenas 27 anos e esteve a bordo da nave Vostok1, ele deu uma volta completamente em órbita ao redor do planeta, que durou 108 minutos. Nessa missão, Gagarin disse uma frase que ficou famosa, “A Terra é azul. Como é maravilhosa. Ela é incrível”. Em 2011, a viagem completou 50 anos e foi reconstruída no filme documentário “First Orbit” que possuo áudio original da missão é foi disponibilizado gratuitamente no YouTube.",
+				audioDasCuriosidadesHistoria[0],
+				"Chegada do homem à lua",
+				"O homem chegou à lua em 20 de julho de 1969. A missão Apollo 11 foi a 5° missão tripulada do programa Apollo e foi a 1° a chegar à lua. O programa Apollo foi um conjunto de missões da NASA que tinha como objetivo, levar o homem à lua. Os tripulantes da Apollo 11 eram: Neil Armstrong, o comandante, Edwin Aldrin e Michael Collins.",
+				audioDasCuriosidadesHistoria[0],
+				"Primeiro transplante de coração",
+				"Em 3 de dezembro de 1967 na África do Sul, aconteceu o primeiro transplante de coração na História. Apesar do transplante bem sucedido realizado pelo cirurgião Christiaan Barnard, o paciente só sobreviveu 18 dias após o procedimento, ele faleceu pois os esforços médicos para combater a rejeição do corpo ao coração, acabou prejudicando muito o sistema imunológico do paciente que contraiu uma infecção pulmonar que o levou à morte.",
+				audioDasCuriosidadesHistoria[0],
+				"Mudança da Capital do Brasil",
+				"Em 21 de Abril de 1960, a capital do Brasil foi transferida do Rio de Janeiro para Brasília. A mudança aconteceu junto com a inauguração da cidade de Brasília que foi prometida pelo presidente Juscelino Kubitschek logo após sua posse em Janeiro de 1956. A cidade foi construída em apenas 3 anos e 10 meses e no dia de sua abertura oficial já tinha cerca de 142 mil habitantes.",
+				audioDasCuriosidadesHistoria[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"A moda dos anos 70 foi muito influenciada pela música, qual dos seguintes estilos não pertence a essa época?",
+				PerguntasClass.Temas.História,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Twiggy",
+				"Twiggy foi uma modelo dos anos 60, ela ficou famosa por ser pequena, com cabelos curtos e ter cílios marcados. É considerada uma das primeiras super modelos do mundo, era o ícone de moda e estilo dos anos 60. O apelido “Twiggy” vem de “Twigs”, graveto em inglês, o nome era referência à magreza da modelo cujo nome real era Lesley Lawson.",
+				audioDasCuriosidadesHistoria[0],
+				"Hippie",
+				"Esse estilo foi popularizado no festival de Woodstock em 69. Os jovens Hippies pregavam a paz e o amor é tinham calças boca de sino, estampas, batas, cabelos longos e barba, no caso dos homens. O estilo Hippie foi a primeira vez em que a moda foi unissex.",
+				audioDasCuriosidadesHistoria[0],
+				"Punk",
+				"O estilo Punk foi difundido com grupos musicais nos anos 70. O visual transgressor era marcado por calças rasgadas, rebites, jaquetas de couro e cabelos coloridos e com cortes diferenciados.",
+				audioDasCuriosidadesHistoria[0],
+				"Glam",
+				"Esse estilo foi influenciado pela música do gênero “Glam Rock”, a estética andrógina, com brilhos e exageros marcou uma quebra de gêneros. David Bowie com sapatos de plataforma e maquiagem, transmitiu a mensagem que, não importa se é feminino ou masculino mas sim, sua individualidade.",
+				audioDasCuriosidadesHistoria[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		// PERGUNTAS DE PROPAGANDA -----------------------------------------------------------------------------------------------------
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Qual marca de cigarro foi resposável pela criação da “Lei de Gérson”?",
+				PerguntasClass.Temas.Propaganda,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Cigarros Vila Rica",
+				"A “Lei de Gerson” é um termo usado para pessoas que querem obter vantagem em tudo. A expressão foi criada em 1976 em uma propaganda para os “Cigarros Vila Rica”. Nessa propaganda, o meio armador da seleção brasileira de futebol, Gérson, diz a seguinte frase: “Por que pagar mais caro se o Vila me dá tudo aquilo que eu quero de um bom cigarro? Gosto de levar vantagem em tudo, certo? Leve vantagem você também, leve Vila Rica!”",
+				audioDasCuriosidadePropaganda[0],
+				"Cigarros Minister",
+				"As propagandas dos Cigarros Minister carregavam o  slogan: “Sabor para quem sabe o que quer.",
+				audioDasCuriosidadePropaganda[0],
+				"Cigarros Hollywood",
+				"O slogan das propagandas dos Cigarros Hollywood era: “Ao sucesso com Hollywood”.",
+				audioDasCuriosidadePropaganda[0],
+				"Cigarros Chanceller",
+				"A propaganda dos Cigarros Chanceller era envolta de sua espessura de 100 milímetros, o slogan utilizado era: “O único fino que satisfaz”.",
+				audioDasCuriosidadePropaganda[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Qual marca de creme dental foi comprada e fundida para se tornar a atual Sorriso?",
+				PerguntasClass.Temas.Propaganda,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Kolynos",
+				"Kolynos é uma marca de pasta-de-dente muito famosa no Brasil, que foi extinta e substituída na fusão, pela então recém-criada Sorriso.A força desta marca era tão grande que apenas recentemente, em 2003, quando indagados por uma pesquisa, que tinha o objetivo de tabular as marcas mais lembradas na cabeça do consumidor , a Kolynos perdeu a primeira posição para sua substituta, a Sorriso. Um fato incrível, já que desde 1997 a marca havia sido extinta.",
+				audioDasCuriosidadePropaganda[0],
+				"Colgate",
+				" William Colgate, fundador da Colgate-Palmolive, lançou o tubo de creme dental, que revolucionou a maneira de vender tal produto e até o momento a venda era feita em pó ou em frascos.O Colgate Ribbon Dental Cream foi o primeiro creme dental em um tubo flexível, introduzido em 1896, quando tinha anteriormente sido vendido em frascos de vidro desde 1873.",
+				audioDasCuriosidadePropaganda[0],
+				"Close-up",
+				"Close-Up é uma marca pertencente à multinacional Unilever referente a uma linha de produtos de higiene bucal. O gel dental desta linha foi o primeiro a ser lançado no mercado norte-americano. Foi lançado no Brasil em 1972. Na década de 60 foi o primeiro gel dental dos EUA, e no Brasil Close Up chegou pouco tempo depois, em 1971, construindo uma identidade própria, inovadora e que fala com o público jovem através de suas campanhas ousadas e produtos diferenciados.",
+				audioDasCuriosidadePropaganda[0],
+				"Sensodyne",
+				"Sensodyne é uma marca de creme dental comercializada para pessoas com dentes sensíveis ou hipersensibilidade dentária. É uma marca registrada da GlaxoSmithKline, que a adquiriu em 2001 na compra da Block Drug que desenvolveu o produto.A Sensodyne tem duas linhas principais de produtos: para sensibilidade e para erosão ácida Ambos os produtos vêm em uma variedade de sabores e com a opção de branqueamento",
+				audioDasCuriosidadePropaganda[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		//PERGUNTAS DE RADIO/TV -------------------------------------------------------------------------------------------------------
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Durante os anos 70, o programa “Correspondente Musical” ficou famoso devido a qual locutor?",
+				PerguntasClass.Temas.Radio,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Hélio Ribeiro",
+				"Correspondente Musical era um programa de músicas do mundo inteiro. Mas a maior atração era Hélio Ribeiro por apresentar o programa de uma maneira inteligente, por ter uma voz com um  timbre inconfundível e por suas memoráveis traduções simultâneas.",
+				audioDasCuriosidadesRadio[0],
+				"Samuel Correia",
+				"Durante os anos 60 se popularizaram os programas policiais como Cidade contra o crime da Rádio Tupi, apresentado por Samuel Correia.",
+				audioDasCuriosidadesRadio[0],
+				"Edmo Zarife",
+				"Edmo Zarife foi um famoso radialista e locutor brasileiro do sistema globo de rádio e responsável por gravar a famosa vinheta “Brasil-Sil-Sil!”, que é usada até hoje sempre que o brasil vence em algum esporte.",
+				audioDasCuriosidadesRadio[0],
+				"Eli Corrêa",
+				"Eli Corrêa é um famoso radialista brasileiro conhecido como  “O homem sorriso do rádio” e, principalmente, pelo seu bordão “Oiiiii Gente!”, apresenta programas de rádio a mais de 46 anos e trabalhou em inúmeras rádios como  Rádio São Paulo, Tupi, Record, Globo, Capital (na qual está atualmente) e América.",
+				audioDasCuriosidadesRadio[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"O bordão “Eu estou aqui para confundir, eu não estou aqui para explicar” era dito por qual apresentador?",
+				PerguntasClass.Temas.Radio,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Chacrinha",
+				"“Alô, Terezinha!”, “Quem não se comunica se trumbica”, “Na TV nada se cria, tudo se copia” , “Eu vim para confundir e não para explicar”, permeado de bordões famosos, os programas do chacrinha fizeram um enorme sucesso e fez dele uma inspiração para muitos apresentadores que vieram depois dele. Porém por conta de seu comportamento teve problemas com a Censura Federal, em uma determinada ocasião ele chegou a ser abordado nos bastidores de seu programa e afirma ter sofrido maus-tratos.",
+				audioDasCuriosidadesRadio[0],
+				"Flávio Cavalcanti",
+				"Flávio Calvacanti ficou muito conhecido por apresentar um dos programas mais polêmicos da televisão brasileira, seu estilo era muito marcante, tinha o costume de quebrar os discos de música que considerava medíocre e jogá-los no lixo. Em 1973 teve seu programa na rede Tupi suspenso por 60 dias pela Censura Federal, ao apresentar uma história em que um homem “emprestava” sua mulher ao vizinho.",
+				audioDasCuriosidadesRadio[0],
+				"Bolinha",
+				"Édson Cabariti, mais conhecido como Bolinha iniciou a carreira como locutor esportivo veio a tornar-se célebre como o apresentador do programa Clube do Bolinha, o qual ficou no ar durante 20 anos na TV Bandeirantes entre 1974 e 1994. Uma das atrações do Clube era o quadro Eles e Elas, no qual transformistas e travestis apresentavam-se.",
+				audioDasCuriosidadesRadio[0],
+				"Ronald Golias",
+				"\"Ô Cride, fala pra mãe...\" Golias dedicou-se a maior parte de sua carreira para a televisão. Trouxe consigo das telas o personagem Carlos Bronco Dinossauro, que acabaria tornando-se um dos destaques da Família Trapo, programa exibido pela TV Record entre 1967 e 1971.",
+				audioDasCuriosidadesRadio[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Qual dos seguintes programas de televisão teve sua estreia no final dos anos 60?",
+				PerguntasClass.Temas.Radio,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Os trapalhões",
+				"A série televisiva “Os trapalhões” teve seu primeiro episódio em 1969 e contava com Renato Aragão,conhecido como Didi Mocó, Mussum, Zacarias e Dedé Santana. Já o primeiro filme do grupo, aconteceu alguns anos antes, em 1966. A série acabou em 1994.",
+				audioDasCuriosidadesRadio[0],
+				"Programa Silvio Santos",
+				"O “Programa Silvio Santos” começou em 1963, e continua no ar até hoje, comandado por Silvio Santos. O programa quase chegou a receber o recorde de programa mais antigo da televisão brasileira porém, perdeu o título para um programa que estreou em 1961.",
+				audioDasCuriosidadesRadio[0],
+				"Mosaico  na TV",
+				"O programa “Mosaico na TV” teve sua estreia em 1961 e é exibido até hoje, tem o título no livro dos recordes de “O programa mais antigo da televisão brasileira ainda em exibição”. “Mosaico na TV” oferece várias atrações como entrevistas, documentários e música e é um programa voltado à comunidade judaica. O programa de televisão foi baseado no programa de rádio “Mosaico”.",
+				audioDasCuriosidadesRadio[0],
+				"Fantástico",
+				"O programa “Fantástico” estreou em 1973 e originalmente se chamava “Fantástico: O Show Da vida”. O programa se destacava devido às suas aberturas coreografadas com música, com o tempo, as aberturas foram perdendo espaço e desde 2010, as aberturas passaram a ter somente 30 segundos de duração.",
+				audioDasCuriosidadesRadio[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Quem era a personalidade da televisão que apresentava os resultados da Loteria Esportiva na Rede Globo nos anos 70?",
+				PerguntasClass.Temas.Radio,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Zebrinha",
+				"Com o enorme sucesso da Loteria Esportiva no início dos anos 70, Borjalo criou a “Zebrinha” para a Rede Globo informar os resultados da loteria no Fantástico. Na gíria da época, “zebra” era um resultado inesperado no futebol, numa alusão ao Jogo do Bicho (zebra é um animal que não existe naquele jogo, portanto, é um resultado impossível de acontecer). O ator Pedro Braga, muito contribuiu com a personagem, ao criar o bordão “Olha eu aí! Zêêêbra!!!”. ",
+				audioDasCuriosidadesRadio[0],
+				"Borjalo",
+				"Caricaturista internacionalmente famoso, Borjalo começou seu trabalho em TV no início dos anos 60. Com a intenção de integrar a caricatura à televisão, passou a ilustrar os programas que dirigia com cartões-truca (caricaturas em papel-cartão com olhos e boca móveis, para dar a impressão de que “falavam”). Borjalo apelidou aquelas caricaturas de Bonecos Falantes.",
+				audioDasCuriosidadesRadio[0],
+				"Cid Moreira",
+				"Hilton Gomes e Cid Moreira abriram a primeira edição do Jornal Nacional anunciando: “O Jornal Nacional, da Rede Globo, um serviço de notícias integrando o Brasil novo, inaugura-se neste momento: imagem e som de todo o país”. Cid Moreira encerrou: “É o Brasil ao vivo aí na sua casa. Boa noite”. Dentre suas informações existia a Loteria Esportiva de Domingo.",
+				audioDasCuriosidadesRadio[0],
+				"William Bonner",
+				"William Bonner Júnior, é um jornalista, publicitário, apresentador e escritor brasileiro. É editor-chefe e apresentador do Jornal Nacional, da Rede Globo, posto que lhe garantiu a posição de jornalista de maior credibilidade do país. Em sua carreira trabalhou no SPTV, Fantástico, Jornal da Globo, Jornal Hoje e Jornal Nacional.",
+				audioDasCuriosidadesRadio[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Qual das seguintes afirmações sobre a novela “Selva de Pedra” está errada?",
+				PerguntasClass.Temas.Radio,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Foi a 2° maior novela da Rede Globo",
+				"A segunda maior novela da Globo foi “Irmãos Coragem”, da mesma autora de “Selva de Pedra”. “Irmãos Coragem” possui 328 capítulos, já “Selva de Pedra”, possui 243. A maior novela da Rede Globo foi “A Grande Mentira” de 1968, com 341 capítulos.",
+				audioDasCuriosidadesRadio[0],
+				"Chegou a ter 100% de audiência",
+				"Na exibição do capítulo 152, em 4 de outubro de 1972, durante a cena em que a personagem Simone Marques, interpretada por Regina Duarte é desmascarada, a novela conseguiu 100% de audiência.",
+				audioDasCuriosidadesRadio[0],
+				"Foi a última de uma série de novelas de Janete Clair",
+				"Entre 1969 e 1973, Janete Clair escreveu uma série de novelas de sucesso para o horário nobre da Globo: “Véu de Noiva”, “Irmãos Coragem”, “O Homem que Deve Morrer” e por último, “Selva de Pedra”.",
+				audioDasCuriosidadesRadio[0],
+				"Alguns capítulos foram exibidos em horários diferentes",
+				"Os capítulos 150 a 158 foram exibidos às 23 horas devido à censura. O horário normal da novela era às 20 horas.",
+				audioDasCuriosidadesRadio[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Segundo boatos, a banda americana “KISS” inspirou sua maquiagem em quais artistas do movimento “Glam Rock”?",
+				PerguntasClass.Temas.Radio,
+				Materiais[0],
+				audioDasPerguntas[0],
+				audioDasAlternativas[0],
+				"Secos & Molhados",
+				"Em 1972, a banda “Secos & Molhados” fez seu primeiro show com maquiagem. Somente no ano seguinte, a banda “KISS” fez seu primeiro show com as maquiagens. Além disso, em 1974, a banda brasileira fez um grande show no México, esse evento deu maior visibilidade à banda que chegou a ter contato com alguns empresários americanos.",
+				audioDasCuriosidadesRadio[0],
+				"David Bowie",
+				"Apesar do artista também usar maquiagem, ele não foi inspiração para a banda “KISS”, além disso, David Bowie tinha uma maquiagem mais glamourosa, ao contrário da maquiagem do “KISS” que era mais teatral.",
+				audioDasCuriosidadesRadio[0],
+				"Elton John",
+				"Apesar do cantor fazer parte do movimento Glam Rock, ele não utilizava maquiagem em suas apresentações. Em 2013, Elton John foi considerado o artista solo masculino mais bem-sucedido de todos os tempos.",
+				audioDasCuriosidadesRadio[0],
+				"Queen",
+				"A banda “Queen” também fez parte do movimento “Glam Rock”, porém, não utilizava maquiagens, o foco da banda era as roupas extravagantes.",
+				audioDasCuriosidadesRadio[0],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+		*/
+		#endregion
 	
 
 	}
