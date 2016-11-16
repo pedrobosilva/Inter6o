@@ -18,6 +18,9 @@ public class QuestionControllScript : MonoBehaviour {
 	public GameObject curiosidade2;
 	public GameObject curiosidade3;
 
+	public GameObject[] vaziosRot;
+	public GameObject respawnPosition;
+
 	public bool GrupoVSGrupoGame = false;
 	public GameObject HUDGrupoVSGrupo;
 	private int randomGroup = 0;
@@ -246,7 +249,7 @@ public class QuestionControllScript : MonoBehaviour {
 
 		//GameControl.gControl.perguntasList [1].respostasBd [2].correta = true;
 
-	
+		//vaziosRot [0].transform.position = new Vector3 (vaziosRot [0].transform.position.x, vaziosRot [0].transform.position.y, vaziosRot [0].transform.position.z);
 
 	}
 	// Use this for initialization
@@ -260,6 +263,18 @@ public class QuestionControllScript : MonoBehaviour {
 
 
 			
+	}
+
+	public void VoltaRotacaoVazio(){
+		vaziosRot [0].transform.position = respawnPosition.transform.position;
+		vaziosRot [0].transform.localRotation = Quaternion.identity;//Quaternion.Euler (0, 0, 0);
+
+		/*vaziosRot [1].transform.rotation = Quaternion.Euler (0, 0, 0);
+		vaziosRot [1].transform.localPosition = new Vector3 (-2.56f, 1.15f, -3.27f);
+		vaziosRot [2].transform.rotation = Quaternion.Euler (0, 0, 0);
+		vaziosRot [2].transform.localPosition = new Vector3 (-2.59f, 0, -3.27f);
+		vaziosRot [3].transform.rotation = Quaternion.Euler (0, 0, 0);
+		vaziosRot [3].transform.localPosition = new Vector3 (-5.42f, 1.15f, -3.27f);*/
 	}
 
 	public void ContaSmile(){
@@ -345,32 +360,32 @@ public class QuestionControllScript : MonoBehaviour {
 		if (GrupoVSGrupoGame == false) {
 		
 			if (QuestionControllScript.Instance.TemaEscolhido == PerguntasClass.Temas.Arte) {
-				PointsArte += 1;
+				PointsArte += 10;
 				pontuacaoText [0].text = PointsArte.ToString ();
 			}
 
 			if (QuestionControllScript.Instance.TemaEscolhido == PerguntasClass.Temas.Esporte) {
-				PointsEsporte += 1;
+				PointsEsporte += 10;
 				pontuacaoText [1].text = PointsEsporte.ToString ();
 			}
 
 			if (QuestionControllScript.Instance.TemaEscolhido == PerguntasClass.Temas.Cinema) {
-				PointsCinema += 1;
+				PointsCinema += 10;
 				pontuacaoText [2].text = PointsCinema.ToString ();
 			}
 
 			if (QuestionControllScript.Instance.TemaEscolhido == PerguntasClass.Temas.Radio) {
-				PointsRadio += 1;
+				PointsRadio += 10;
 				pontuacaoText [3].text = PointsRadio.ToString ();
 			}
 
 			if (QuestionControllScript.Instance.TemaEscolhido == PerguntasClass.Temas.História) {
-				PointsHistoria += 1;
+				PointsHistoria += 10;
 				pontuacaoText [4].text = PointsHistoria.ToString ();
 			}
 
 			if (QuestionControllScript.Instance.TemaEscolhido == PerguntasClass.Temas.Propaganda) {
-				PointsPropaganda += 1;
+				PointsPropaganda += 10;
 				pontuacaoText [5].text = PointsPropaganda.ToString ();
 			}
 		} else {
@@ -566,6 +581,8 @@ public class QuestionControllScript : MonoBehaviour {
 
 			if (randomAnswer == 0) {
 				resposta0.GetComponent<ButtonScript> ().isCorrect = true;
+			}else {
+				resposta0.GetComponent<ButtonScript> ().isCorrect = false;
 			}
 			for (int i = 0; i < 4; i++) {
 				if (randomControll [i] == randomAnswer) {
@@ -597,6 +614,9 @@ public class QuestionControllScript : MonoBehaviour {
 			if (randomAnswer == 0) {
 				resposta1.GetComponent<ButtonScript> ().isCorrect = true;
 			}
+			else {
+				resposta1.GetComponent<ButtonScript> ().isCorrect = false;
+			} 
 			for (int i = 0; i < 4; i++) {
 				if (randomControll [i] == randomAnswer) {
 					randomControll [i] = -1;
@@ -623,6 +643,8 @@ public class QuestionControllScript : MonoBehaviour {
 			}
 			if (randomAnswer == 0) {
 				resposta2.GetComponent<ButtonScript> ().isCorrect = true;
+			} else {
+				resposta2.GetComponent<ButtonScript> ().isCorrect = false;
 			}
 			for (int i = 0; i < 4; i++) {
 				if (randomControll [i] == randomAnswer) {
@@ -651,7 +673,10 @@ public class QuestionControllScript : MonoBehaviour {
 			}
 			if (randomAnswer == 0) {
 				resposta3.GetComponent<ButtonScript> ().isCorrect = true;
+			} else {
+				resposta3.GetComponent<ButtonScript> ().isCorrect = false;
 			}
+
 			for (int i = 0; i < 4; i++) {
 				if (randomControll [i] == randomAnswer) {
 					randomControll [i] = -1;
@@ -663,6 +688,7 @@ public class QuestionControllScript : MonoBehaviour {
 		GameControl.gControl.perguntasList [randomNumber].tentada = true;
 		selecao = false;
 		qtdPerguntasTentada = 0;
+
 
 		/*int qtdPerguntaTema = 0;
 		for (int i = 0; i < GameControl.gControl.perguntasList.Count; i++) {

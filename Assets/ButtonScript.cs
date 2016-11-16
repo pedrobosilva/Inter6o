@@ -33,6 +33,12 @@ public class ButtonScript : MonoBehaviour {
 
 	private Vector3 posicaoInitial;
 	private Vector3 scaleInitial;
+	private Vector3 rotacaoInicial;
+
+	public GameObject vaziosRot;
+	public GameObject respawnPosition;
+
+
 
 	public bool goFlick = false;
 	public bool goFlickCuriosidade = false;
@@ -50,6 +56,7 @@ public class ButtonScript : MonoBehaviour {
 
 
 		posicaoInitial = new Vector3 (transform.position.x, transform.position.y, -7);
+		rotacaoInicial = new Vector3 (transform.rotation.x,transform.rotation.y,transform.rotation.z);
 
 	}
 
@@ -94,6 +101,22 @@ public class ButtonScript : MonoBehaviour {
 
 	}
 
+	public void VoltaRotacaoBatata(){
+		vaziosRot.transform.position = respawnPosition.transform.position;
+		vaziosRot.transform.localRotation = Quaternion.Euler (0, 0, 0);
+
+
+		/*vaziosRot [1].transform.position = respawnPosition[1].transform.position;
+		vaziosRot [1].transform.localRotation = Quaternion.Euler (0, 0, 0);
+
+		vaziosRot [2].transform.position = respawnPosition[2].transform.position;
+		vaziosRot [2].transform.localRotation = Quaternion.Euler (0, 0, 0);
+
+		vaziosRot [3].transform.position = respawnPosition[3].transform.position;
+		vaziosRot [3].transform.localRotation = Quaternion.Euler (0, 0, 0); */
+
+	}
+
 
 	private void FlickButton(object sender, EventArgs e){
 		
@@ -101,25 +124,28 @@ public class ButtonScript : MonoBehaviour {
 
 		if (tipo == type.resposta && gesture.ScreenPosition.y > gesture.PreviousScreenPosition.y) {
 			transform.position = new Vector3(transform.position.x, transform.position.y, -7.1f);
+			//goFlick = true;
 
-			Debug.Log ("Colocar o iTween aqui");
-
-			iTween.MoveTo (gameObject.transform.parent.gameObject, iTween.Hash (
+				iTween.MoveTo (gameObject.transform.parent.gameObject, iTween.Hash (
 				"y", 1,
 				"speed", 0.5f,
-				"easetype", iTween.EaseType.easeOutQuint
+				"easetype", iTween.EaseType.easeOutQuint, 
+				"oncompletetarget", gameObject,
+				"oncomplete", "VoltaRotacaoBatata"
+
 				));	
 
 			//"oncomplete", Ctrl_Verific = true
 
 			iTween.RotateBy (gameObject.transform.parent.gameObject, iTween.Hash (
-				"z", 10
+				"z", 10,
+				"oncomplete", "VoltaRotacaoBatata"
 				));
-
-
+	
+				
 
 			// Não vai precisar do GoFlick = true, tira a linha que depois eu arrumo certinho.
-			//goFlick = true;
+		
 		}
 
 		if (tipo == type.resposta && gesture.ScreenPosition.y < gesture.PreviousScreenPosition.y) {
@@ -128,7 +154,6 @@ public class ButtonScript : MonoBehaviour {
 		}
 
 		if (tipo == type.curiosidade && gesture.ScreenPosition.y > gesture.PreviousScreenPosition.y) {
-			Debug.Log ("Colocar o iTween aqui");
 			// não vai precisar do goflickCuriosidade = true tira a linha que depois eu arrumo certinho.
 			goFlickCuriosidade = true;
 		}
@@ -156,6 +181,8 @@ public class ButtonScript : MonoBehaviour {
 
 	public void VoltarAPosicaoInicial(){
 		transform.position = posicaoInitial;
+
+		
 	}
 
 	void Update ()
