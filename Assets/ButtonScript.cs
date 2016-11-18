@@ -155,6 +155,8 @@ public class ButtonScript : MonoBehaviour {
 
 		if (tipo == type.curiosidade && gesture.ScreenPosition.y > gesture.PreviousScreenPosition.y) {
 			// não vai precisar do goflickCuriosidade = true tira a linha que depois eu arrumo certinho.
+			VerificaQuestaoScript.Instance.canvasCorreto.SetActive(false);
+			VerificaQuestaoScript.Instance.canvasErrado.SetActive(false);
 			goFlickCuriosidade = true;
 		}
 	}

@@ -13,6 +13,8 @@ public class VerificaQuestaoScript : MonoBehaviour {
 	public GameObject Curiosidade3;
 
 	public GameObject confetesGB;
+	public GameObject canvasErrado;
+	public GameObject canvasCorreto;
 
 	public bool respostaCorreta = false;
 
@@ -49,13 +51,15 @@ public class VerificaQuestaoScript : MonoBehaviour {
 
 
 
-			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true && !AudioControllerGame.Instance.audioSource.isPlaying) {
+			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true && !AudioControllerGame.Instance.audioSource.isPlaying && !VerificaCuriosidadeScript.Instance.verificarCuriosidades) {
 				confetesGB.SetActive (true);
+				canvasCorreto.SetActive (true);
 				AudioControllerGame.Instance.PlaySound (SoundGames.RespostaCorretaSound);
 				respostaCorreta = true;
 			}
 
-			if(colision.gameObject.GetComponent<ButtonScript> ().isCorrect == false && !AudioControllerGame.Instance.audioSource.isPlaying){
+			if(colision.gameObject.GetComponent<ButtonScript> ().isCorrect == false && !AudioControllerGame.Instance.audioSource.isPlaying && !VerificaCuriosidadeScript.Instance.verificarCuriosidades){
+				canvasErrado.SetActive (true);
 				AudioControllerGame.Instance.PlaySound (SoundGames.RespostaErradaSound);
 			}
 		
@@ -82,15 +86,18 @@ public class VerificaQuestaoScript : MonoBehaviour {
 
 		
 
-			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true && !AudioControllerGame.Instance.audioSource.isPlaying) {
+			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true && !AudioControllerGame.Instance.audioSource.isPlaying && !VerificaCuriosidadeScript.Instance.verificarCuriosidades) {
 				confetesGB.SetActive (true);
+				canvasCorreto.SetActive (true);
 				AudioControllerGame.Instance.PlaySound (SoundGames.RespostaCorretaSound);
 				respostaCorreta = true;
 			} 
 
-			if(colision.gameObject.GetComponent<ButtonScript> ().isCorrect == false && !AudioControllerGame.Instance.audioSource.isPlaying){
+			if(colision.gameObject.GetComponent<ButtonScript> ().isCorrect == false && !AudioControllerGame.Instance.audioSource.isPlaying && !VerificaCuriosidadeScript.Instance.verificarCuriosidades){
+				canvasErrado.SetActive (true);
 				AudioControllerGame.Instance.PlaySound (SoundGames.RespostaErradaSound);
 			}
+
 		
 			}
 	
@@ -114,14 +121,16 @@ public class VerificaQuestaoScript : MonoBehaviour {
 
 		
 
-			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true && !AudioControllerGame.Instance.audioSource.isPlaying) {
+			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true && !AudioControllerGame.Instance.audioSource.isPlaying && !VerificaCuriosidadeScript.Instance.verificarCuriosidades) {
 				confetesGB.SetActive (true);
+				canvasCorreto.SetActive (true);
 				AudioControllerGame.Instance.PlaySound (SoundGames.RespostaCorretaSound);
 				respostaCorreta = true;
 
 			} 
 
-			if(colision.gameObject.GetComponent<ButtonScript> ().isCorrect == false && !AudioControllerGame.Instance.audioSource.isPlaying){
+			if(colision.gameObject.GetComponent<ButtonScript> ().isCorrect == false && !AudioControllerGame.Instance.audioSource.isPlaying && !VerificaCuriosidadeScript.Instance.verificarCuriosidades){
+				canvasErrado.SetActive (true);
 				AudioControllerGame.Instance.PlaySound (SoundGames.RespostaErradaSound);
 			}
 
@@ -147,13 +156,15 @@ public class VerificaQuestaoScript : MonoBehaviour {
 			//colision.gameObject.GetComponent<ButtonScript> ().VoltarAPosicaoInicial();
 
 
-			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true && !AudioControllerGame.Instance.audioSource.isPlaying) {
+			if (colision.gameObject.GetComponent<ButtonScript> ().isCorrect == true && !AudioControllerGame.Instance.audioSource.isPlaying && !VerificaCuriosidadeScript.Instance.verificarCuriosidades) {
 				confetesGB.SetActive (true);
+				canvasCorreto.SetActive (true);
 				AudioControllerGame.Instance.PlaySound (SoundGames.RespostaCorretaSound);
 				respostaCorreta = true;
 			} 
 
-			if(colision.gameObject.GetComponent<ButtonScript> ().isCorrect == false && !AudioControllerGame.Instance.audioSource.isPlaying){
+			if(colision.gameObject.GetComponent<ButtonScript> ().isCorrect == false && !AudioControllerGame.Instance.audioSource.isPlaying && !VerificaCuriosidadeScript.Instance.verificarCuriosidades){
+				canvasErrado.SetActive (true);
 				AudioControllerGame.Instance.PlaySound (SoundGames.RespostaErradaSound);
 			}
 

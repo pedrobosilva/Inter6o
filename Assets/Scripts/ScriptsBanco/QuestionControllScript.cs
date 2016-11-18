@@ -79,7 +79,80 @@ public class QuestionControllScript : MonoBehaviour {
 
 	void Start(){
 
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Quem foi o autor do quadro “Criança Morta”?",
+				PerguntasClass.Temas.Arte,
+				Materiais[6],
+				audioDasPerguntas[5],
+				audioDasAlternativas[5],
+				"Candido Portinari",
+				"Candido Portinari realizou cerca de 4.500 obras em 40 anos de trabalho , só cursou o primário. Quando ainda estava na escola, Portinari desenhou um leão em sala de aula. A obra foi tão adorada que ele foi obrigado a desenhar a capa de todas as provas que seriam expostas no final de ano. Aos 9 anos pintou o teto da igreja de sua cidade.",
+				audioDasCuriosidadeArte[0],
+				"Lasar Segall",
+				"Lasar Segall nasceu na Lituânia. Em 1912 veio ao Brasil,deu aulas de desenho à jovem Jenny Klabin,com quem iria se casar doze anos mais tarde. No final daquele voltou à Europa   e conheceu Margarete Quack, com quem se casou no fim Primeira Guerra teve.Lasar e Margarete voltam ao Brasil. Um ano depois, em 1924, se separou e se casou com Jenny Klabin, sua ex-aluna.",
+				audioDasCuriosidadeArte[1],
+				"Tarsila do Amaral",
+				"Foi considerada a pintora mais representativa da primeira fase do Modernismo no Brasil e recebeu o Prêmio de Pintura Nacional na I Bienal de São Paulo, em 1951. A pintora costumava levar cachaça brasileira em suas viagens ao exterior. Ela enganava os funcionários da alfândega dizendo que era álcool para “passar na pele”.",
+				audioDasCuriosidadeArte[2],
+				"Romero Britto",
+				"Romero Britto é um artista plástico brasileiro de grande renome internacional, radicado nos Estados Unidos, Além das celebridades norte-americanas, Britto também produziu telas para Bill Clinton, o príncipe William, Kate Middleton, Pelé, Roberto Marinho e para a ex-Presidente do país, Dilma Rousseff.",
+				audioDasCuriosidadeArte[3],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
 
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"A qual movimento artístico pertence a seguinte obra?",
+				PerguntasClass.Temas.Arte,
+				Materiais[7],
+				audioDasPerguntas[6],
+				audioDasAlternativas[6],
+				"Arte conceitual",
+				"A arte conceitual teve sua origem na obra de Duchamp, no episódio no qual enviou um mictório para um salão de arte,sob o título “A Fonte”, o artista inaugurou contra a sua própria vontade, um novo movimento artístico  na qual a idéia é o mais importante da obra.",
+				audioDasCuriosidadeArte[4],
+				"Expressionismo",
+				"Expressionismo que teve seu auge no final do século XIX e início do século XX.Sem preocupação com a beleza ou com os padrões.O período em que se desenvolveu esse movimento artísticos foi muito conturbado. Cenário da primeira guerra mundial. A pintura “O Grito” é o melhor exemplo do estilo artístico denominado Expressionismo.",
+				audioDasCuriosidadeArte[5],
+				"Naturalismo",
+				"Naturalismo é conhecido por ser a radicalização do Realismo, baseando-se na observação fiel da realidade e na experiência, mostrando que o indivíduo é determinado pelo ambiente e pela hereditariedade. O movimento esboçou o que se pode declarar como os primeiros passos do pensamento teórico evolucionista de Charles Darwin.",
+				audioDasCuriosidadeArte[6],
+				"Simbolismo",
+				"Simbolismo é um movimento literário da poesia e das outras artes que surgiu na França, no final do século XIX, como oposição ao realismo, ao naturalismo e ao positivismo da época. Movido pelos ideais românticos, teve suas origens de “As Flores do Mal”, do poeta Charles Baudelaire.",
+				audioDasCuriosidadeArte[7],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Qual marca de creme dental foi comprada e fundida para se tornar a atual Sorriso?",
+				PerguntasClass.Temas.Propaganda,
+				Materiais[8],
+				audioDasPerguntas[7],
+				audioDasAlternativas[7],
+				"Kolynos",
+				"Kolynos é uma marca de pasta-de-dente muito famosa no Brasil, que foi extinta e substituída na fusão, pela então recém-criada Sorriso.A força desta marca era tão grande que apenas recentemente, em 2003, quando indagados por uma pesquisa, que tinha o objetivo de tabular as marcas mais lembradas na cabeça do consumidor , a Kolynos perdeu a primeira posição para sua substituta, a Sorriso. Um fato incrível, já que desde 1997 a marca havia sido extinta.",
+				audioDasCuriosidadePropaganda[4],
+				"Colgate",
+				" William Colgate, fundador da Colgate-Palmolive, lançou o tubo de creme dental, que revolucionou a maneira de vender tal produto e até o momento a venda era feita em pó ou em frascos.O Colgate Ribbon Dental Cream foi o primeiro creme dental em um tubo flexível, introduzido em 1896, quando tinha anteriormente sido vendido em frascos de vidro desde 1873.",
+				audioDasCuriosidadePropaganda[5],
+				"Close-up",
+				"Close-Up é uma marca pertencente à multinacional Unilever referente a uma linha de produtos de higiene bucal. O gel dental desta linha foi o primeiro a ser lançado no mercado norte-americano. Foi lançado no Brasil em 1972. Na década de 60 foi o primeiro gel dental dos EUA, e no Brasil Close Up chegou pouco tempo depois, em 1971, construindo uma identidade própria, inovadora e que fala com o público jovem através de suas campanhas ousadas e produtos diferenciados.",
+				audioDasCuriosidadePropaganda[6],
+				"Gessy",
+				"Desde 1946, a publicidade usava o fim de um romance com o mau hálito para promover o Creme Dental Gessy,utilizando a seguinte deixa: Porque, às vezes, todo o curso de um romance depende de um pormenor… da pureza e frescor de seu hálito. Esteja certa de que isto não lhe sucederá, protegendo seu hálito… protegendo seus dentes com o creme dental Gessy.",
+				audioDasCuriosidadePropaganda[7],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false)); 
 
 		/*GameControl.gControl.perguntasList.Add(
 			new PerguntasClass(
@@ -103,7 +176,7 @@ public class QuestionControllScript : MonoBehaviour {
 				"resposta5",
 				"curiosidade5",
 				"resposta6",
-				"curiosidade6"));*/
+				"curiosidade6"));
 
 
 
@@ -207,7 +280,7 @@ public class QuestionControllScript : MonoBehaviour {
 				"curiosidade6",
 				false));
 
-
+	*/
 
 
 		/*
@@ -283,55 +356,9 @@ public class QuestionControllScript : MonoBehaviour {
 				"Curiosidade6",
 				false));
 
-		GameControl.gControl.perguntasList.Add (
-			new PerguntasClass(
-				"A qual movimento artístico pertence a seguinte obra?",
-				PerguntasClass.Temas.Arte,
-				Materiais[0],
-				audioDasPerguntas[0],
-				audioDasAlternativas[0],
-				"Arte conceitual",
-				"A arte conceitual teve sua origem na obra de Duchamp, no episódio no qual enviou um mictório para um salão de arte,sob o título “A Fonte”, o artista inaugurou contra a sua própria vontade, um novo movimento artístico  na qual a idéia é o mais importante da obra.",
-				audioDasCuriosidadeArte[0],
-				"Expressionismo",
-				"Expressionismo que teve seu auge no final do século XIX e início do século XX.Sem preocupação com a beleza ou com os padrões.O período em que se desenvolveu esse movimento artísticos foi muito conturbado. Cenário da primeira guerra mundial. A pintura “O Grito” é o melhor exemplo do estilo artístico denominado Expressionismo.",
-				audioDasCuriosidadeArte[0],
-				"Naturalismo",
-				"Naturalismo é conhecido por ser a radicalização do Realismo, baseando-se na observação fiel da realidade e na experiência, mostrando que o indivíduo é determinado pelo ambiente e pela hereditariedade. O movimento esboçou o que se pode declarar como os primeiros passos do pensamento teórico evolucionista de Charles Darwin.",
-				audioDasCuriosidadeArte[0],
-				"Simbolismo",
-				"Simbolismo é um movimento literário da poesia e das outras artes que surgiu na França, no final do século XIX, como oposição ao realismo, ao naturalismo e ao positivismo da época. Movido pelos ideais românticos, teve suas origens de “As Flores do Mal”, do poeta Charles Baudelaire.",
-				audioDasCuriosidadeArte[0],
-				"Resposta5",
-				"Curiosidade5",
-				"Resposta6",
-				"Curiosidade6",
-				false));
 
-		GameControl.gControl.perguntasList.Add (
-			new PerguntasClass(
-				"Quem foi o autor do quadro “Criança Morta”?",
-				PerguntasClass.Temas.Arte,
-				Materiais[0],
-				audioDasPerguntas[0],
-				audioDasAlternativas[0],
-				"Candido Portinari",
-				"Candido Portinari realizou cerca de 4.500 obras em 40 anos de trabalho , só cursou o primário. Quando ainda estava na escola, Portinari desenhou um leão em sala de aula. A obra foi tão adorada que ele foi obrigado a desenhar a capa de todas as provas que seriam expostas no final de ano. Aos 9 anos pintou o teto da igreja de sua cidade.",
-				audioDasCuriosidadeArte[0],
-				"Lasar Segall",
-				"Lasar Segall nasceu na Lituânia. Em 1912 veio ao Brasil,deu aulas de desenho à jovem Jenny Klabin,com quem iria se casar doze anos mais tarde. No final daquele voltou à Europa   e conheceu Margarete Quack, com quem se casou no fim Primeira Guerra teve.Lasar e Margarete voltam ao Brasil. Um ano depois, em 1924, se separou e se casou com Jenny Klabin, sua ex-aluna.",
-				audioDasCuriosidadeArte[0],
-				"Tarsila do Amaral",
-				"Foi considerada a pintora mais representativa da primeira fase do Modernismo no Brasil e recebeu o Prêmio de Pintura Nacional na I Bienal de São Paulo, em 1951. A pintora costumava levar cachaça brasileira em suas viagens ao exterior. Ela enganava os funcionários da alfândega dizendo que era álcool para “passar na pele”.",
-				audioDasCuriosidadeArte[0],
-				"Romero Britto",
-				"Romero Britto é um artista plástico brasileiro de grande renome internacional, radicado nos Estados Unidos, Além das celebridades norte-americanas, Britto também produziu telas para Bill Clinton, o príncipe William, Kate Middleton, Pelé, Roberto Marinho e para a ex-Presidente do país, Dilma Rousseff.",
-				audioDasCuriosidadeArte[0],
-				"Resposta5",
-				"Curiosidade5",
-				"Resposta6",
-				"Curiosidade6",
-				false));
+
+
 
 		GameControl.gControl.perguntasList.Add (
 			new PerguntasClass(
@@ -591,30 +618,7 @@ public class QuestionControllScript : MonoBehaviour {
 				"Curiosidade6",
 				false));
 
-		GameControl.gControl.perguntasList.Add (
-			new PerguntasClass(
-				"Qual marca de creme dental foi comprada e fundida para se tornar a atual Sorriso?",
-				PerguntasClass.Temas.Propaganda,
-				Materiais[0],
-				audioDasPerguntas[0],
-				audioDasAlternativas[0],
-				"Kolynos",
-				"Kolynos é uma marca de pasta-de-dente muito famosa no Brasil, que foi extinta e substituída na fusão, pela então recém-criada Sorriso.A força desta marca era tão grande que apenas recentemente, em 2003, quando indagados por uma pesquisa, que tinha o objetivo de tabular as marcas mais lembradas na cabeça do consumidor , a Kolynos perdeu a primeira posição para sua substituta, a Sorriso. Um fato incrível, já que desde 1997 a marca havia sido extinta.",
-				audioDasCuriosidadePropaganda[0],
-				"Colgate",
-				" William Colgate, fundador da Colgate-Palmolive, lançou o tubo de creme dental, que revolucionou a maneira de vender tal produto e até o momento a venda era feita em pó ou em frascos.O Colgate Ribbon Dental Cream foi o primeiro creme dental em um tubo flexível, introduzido em 1896, quando tinha anteriormente sido vendido em frascos de vidro desde 1873.",
-				audioDasCuriosidadePropaganda[0],
-				"Close-up",
-				"Close-Up é uma marca pertencente à multinacional Unilever referente a uma linha de produtos de higiene bucal. O gel dental desta linha foi o primeiro a ser lançado no mercado norte-americano. Foi lançado no Brasil em 1972. Na década de 60 foi o primeiro gel dental dos EUA, e no Brasil Close Up chegou pouco tempo depois, em 1971, construindo uma identidade própria, inovadora e que fala com o público jovem através de suas campanhas ousadas e produtos diferenciados.",
-				audioDasCuriosidadePropaganda[0],
-				"Sensodyne",
-				"Sensodyne é uma marca de creme dental comercializada para pessoas com dentes sensíveis ou hipersensibilidade dentária. É uma marca registrada da GlaxoSmithKline, que a adquiriu em 2001 na compra da Block Drug que desenvolveu o produto.A Sensodyne tem duas linhas principais de produtos: para sensibilidade e para erosão ácida Ambos os produtos vêm em uma variedade de sabores e com a opção de branqueamento",
-				audioDasCuriosidadePropaganda[0],
-				"Resposta5",
-				"Curiosidade5",
-				"Resposta6",
-				"Curiosidade6",
-				false));
+
 
 		//PERGUNTAS DE RADIO/TV -------------------------------------------------------------------------------------------------------
 
@@ -1002,7 +1006,7 @@ public class QuestionControllScript : MonoBehaviour {
 			//Debug.Log("Quantidade de perguntas do tema:" + qtdPerguntaTema);
 			//Debug.Log("Quantidade em que ela foi tentada:" + qtdPerguntasTentada);
 			selecao = true;
-			UnityEditor.EditorApplication.isPlaying = false;
+			//UnityEditor.EditorApplication.isPlaying = false;
 		}
 		//Debug.Log(GameControl.gControl.perguntasList[randomNumber].tentada);
 	}

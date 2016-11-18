@@ -85,7 +85,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 		Curiosidade2.SetActive (true);
 		Curiosidade3.SetActive (true);
 
-		VoltaRotacaoCuriosidade ();
+		//VoltaRotacaoCuriosidade ();
 
 		VerificaQuestaoScript.Instance.respostaCorreta = false;
 		verificarCuriosidades = false;
@@ -121,7 +121,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 		HUDPergunta.SetActive (true);
 		BackgroundPontuacaoCorreta.SetActive (false);
 
-		VoltaRotacaoCuriosidade ();
+	//	VoltaRotacaoCuriosidade ();
 
 		VerificaQuestaoScript.Instance.respostaCorreta = false;
 		verificarCuriosidades = false;
@@ -177,6 +177,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 				verificarCuriosidades = true;
 				HUDPergunta.SetActive (false);
 				VerificaQuestaoScript.Instance.respostaCorreta = false;
+				VerificaQuestaoScript.Instance.canvasCorreto.SetActive (false);
 				Curiosidade0.GetComponent<PlaySound1> ().StopSound ();
 				AudioControllerGame.Instance.PlaySound (SoundGames.MoedaSound);
 
@@ -191,6 +192,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 				CanvasCuriosidade.SetActive (false);
 				Respostas [0].SetActive (false);
 				VerificaQuestaoScript.Instance.respostaCorreta = false;
+				VerificaQuestaoScript.Instance.canvasErrado.SetActive (false);
 				Curiosidade0.GetComponent<PlaySound1> ().StopSound ();
 
 				if (QuestionControllScript.Instance.GrupoVSGrupoGame == true) {
@@ -213,6 +215,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 				HUDPergunta.SetActive (false);
 				BackgroundPontuacaoCorreta.SetActive (true);
 				VerificaQuestaoScript.Instance.respostaCorreta = false;
+				VerificaQuestaoScript.Instance.canvasCorreto.SetActive (false);
 				Curiosidade1.GetComponent<PlaySound1> ().StopSound ();
 				AudioControllerGame.Instance.PlaySound (SoundGames.MoedaSound);
 
@@ -224,6 +227,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 				CanvasCuriosidade.SetActive (false);
 				Respostas [1].SetActive (false);
 				VerificaQuestaoScript.Instance.respostaCorreta = false;
+				VerificaQuestaoScript.Instance.canvasErrado.SetActive (false);
 				Curiosidade1.GetComponent<PlaySound1> ().StopSound ();
 
 				if (QuestionControllScript.Instance.GrupoVSGrupoGame == true) {
@@ -246,6 +250,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 				HUDPergunta.SetActive (false);
 				BackgroundPontuacaoCorreta.SetActive (true);
 				VerificaQuestaoScript.Instance.respostaCorreta = false;
+				VerificaQuestaoScript.Instance.canvasCorreto.SetActive (false);
 				Curiosidade2.GetComponent<PlaySound1> ().StopSound ();
 				AudioControllerGame.Instance.PlaySound (SoundGames.MoedaSound);
 		
@@ -257,6 +262,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 				CanvasCuriosidade.SetActive (false);
 				Respostas [2].SetActive (false);
 				VerificaQuestaoScript.Instance.respostaCorreta = false;
+				VerificaQuestaoScript.Instance.canvasErrado.SetActive (false);
 				Curiosidade2.GetComponent<PlaySound1> ().StopSound ();
 
 				if (QuestionControllScript.Instance.GrupoVSGrupoGame == true) {
@@ -279,6 +285,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 				HUDPergunta.SetActive (false);
 				BackgroundPontuacaoCorreta.SetActive (true);
 				VerificaQuestaoScript.Instance.respostaCorreta = false;
+				VerificaQuestaoScript.Instance.canvasCorreto.SetActive (false);
 				Curiosidade3.GetComponent<PlaySound1> ().StopSound ();
 				AudioControllerGame.Instance.PlaySound (SoundGames.MoedaSound);
 
@@ -290,6 +297,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 				CanvasCuriosidade.SetActive (false);
 				Respostas [3].SetActive (false);
 				VerificaQuestaoScript.Instance.respostaCorreta = false;
+				VerificaQuestaoScript.Instance.canvasErrado.SetActive (false);
 				Curiosidade3.GetComponent<PlaySound1> ().StopSound ();
 
 				if (QuestionControllScript.Instance.GrupoVSGrupoGame == true) {
@@ -308,6 +316,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 			pontuacaoAnim.SetActive (true);
 			QuestionControllScript.Instance.ContaPontuacao ();
 			VerificaQuestaoScript.Instance.respostaCorreta = false;
+			VerificaQuestaoScript.Instance.canvasErrado.SetActive (false);
 			Curiosidade0.GetComponent<PlaySound1> ().StopSound ();
 			AudioControllerGame.Instance.PlaySound (SoundGames.MoedaSound);
 		}
@@ -322,6 +331,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 			pontuacaoAnim.SetActive (true);
 			QuestionControllScript.Instance.ContaPontuacao ();
 			VerificaQuestaoScript.Instance.respostaCorreta = false;
+			VerificaQuestaoScript.Instance.canvasErrado.SetActive (false);
 			Curiosidade1.GetComponent<PlaySound1> ().StopSound ();
 			AudioControllerGame.Instance.PlaySound (SoundGames.MoedaSound);
 		}
@@ -336,6 +346,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 			pontuacaoAnim.SetActive (true);
 			QuestionControllScript.Instance.ContaPontuacao ();
 			VerificaQuestaoScript.Instance.respostaCorreta = false;
+			VerificaQuestaoScript.Instance.canvasErrado.SetActive (false);
 			Curiosidade2.GetComponent<PlaySound1> ().StopSound ();
 			AudioControllerGame.Instance.PlaySound (SoundGames.MoedaSound);
 		}
@@ -350,6 +361,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 			pontuacaoAnim.SetActive (true);
 			QuestionControllScript.Instance.ContaPontuacao ();
 			VerificaQuestaoScript.Instance.respostaCorreta = false;
+			VerificaQuestaoScript.Instance.canvasErrado.SetActive (false);
 			Curiosidade3.GetComponent<PlaySound1> ().StopSound ();
 			AudioControllerGame.Instance.PlaySound (SoundGames.MoedaSound);
 		}
