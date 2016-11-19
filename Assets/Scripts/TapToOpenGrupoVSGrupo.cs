@@ -74,6 +74,7 @@ public class TapToOpenGrupoVSGrupo : MonoBehaviour {
 			"looptype", iTween.LoopType.none,
 			"easetype", iTween.EaseType.linear));
 
+		QuestionControllScript.Instance.qtdPerguntasTentada = 0;
 
 		QuestionControllScript.Instance.SetQuestion();
 
