@@ -28,6 +28,10 @@ public class SelfDestroy : MonoBehaviour {
 		isOn = true;
 	}
 
+	public void DisableObject(){
+		gameObject.SetActive (false);
+	}
+
 
 
 }

@@ -2,7 +2,10 @@
 using System.Collections;
 
 public enum SoundGames{
-	ButtonSound
+	ButtonSound,
+	RespostaCorretaSound,
+	MoedaSound,
+	RespostaErradaSound
 }
 
 public class AudioControllerGame : MonoBehaviour {
@@ -11,6 +14,9 @@ public class AudioControllerGame : MonoBehaviour {
 	public AudioSource audioSource;
 
 	public AudioClip buttonSound;
+	public AudioClip respostaCorreta;
+	public AudioClip moedaSound;
+	public AudioClip respostaErradaSound;
 
 	void Awake(){
 		Instance = this;
@@ -26,8 +32,24 @@ public class AudioControllerGame : MonoBehaviour {
 		case SoundGames.ButtonSound: 
 			audioSource.PlayOneShot (buttonSound);
 			break;
+		}
 
-		
+		switch (soundID) {
+		case SoundGames.RespostaCorretaSound: 
+			audioSource.PlayOneShot (respostaCorreta);
+			break;
+		}
+
+		switch (soundID) {
+		case SoundGames.MoedaSound: 
+			audioSource.PlayOneShot (moedaSound);
+			break;
+		}
+
+		switch (soundID) {
+		case SoundGames.RespostaErradaSound: 
+			audioSource.PlayOneShot (respostaErradaSound);
+			break;
 		}
 	}
 }

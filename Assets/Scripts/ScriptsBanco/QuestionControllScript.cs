@@ -18,6 +18,9 @@ public class QuestionControllScript : MonoBehaviour {
 	public GameObject curiosidade2;
 	public GameObject curiosidade3;
 
+	public GameObject[] vaziosRot;
+	public GameObject respawnPosition;
+
 	public bool GrupoVSGrupoGame = false;
 	public GameObject HUDGrupoVSGrupo;
 	private int randomGroup = 0;
@@ -76,7 +79,80 @@ public class QuestionControllScript : MonoBehaviour {
 
 	void Start(){
 
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Quem foi o autor do quadro “Criança Morta”?",
+				PerguntasClass.Temas.Arte,
+				Materiais[6],
+				audioDasPerguntas[5],
+				audioDasAlternativas[5],
+				"Candido Portinari",
+				"Candido Portinari realizou cerca de 4.500 obras em 40 anos de trabalho , só cursou o primário. Quando ainda estava na escola, Portinari desenhou um leão em sala de aula. A obra foi tão adorada que ele foi obrigado a desenhar a capa de todas as provas que seriam expostas no final de ano. Aos 9 anos pintou o teto da igreja de sua cidade.",
+				audioDasCuriosidadeArte[0],
+				"Lasar Segall",
+				"Lasar Segall nasceu na Lituânia. Em 1912 veio ao Brasil,deu aulas de desenho à jovem Jenny Klabin,com quem iria se casar doze anos mais tarde. No final daquele voltou à Europa   e conheceu Margarete Quack, com quem se casou no fim Primeira Guerra teve.Lasar e Margarete voltam ao Brasil. Um ano depois, em 1924, se separou e se casou com Jenny Klabin, sua ex-aluna.",
+				audioDasCuriosidadeArte[1],
+				"Tarsila do Amaral",
+				"Foi considerada a pintora mais representativa da primeira fase do Modernismo no Brasil e recebeu o Prêmio de Pintura Nacional na I Bienal de São Paulo, em 1951. A pintora costumava levar cachaça brasileira em suas viagens ao exterior. Ela enganava os funcionários da alfândega dizendo que era álcool para “passar na pele”.",
+				audioDasCuriosidadeArte[2],
+				"Romero Britto",
+				"Romero Britto é um artista plástico brasileiro de grande renome internacional, radicado nos Estados Unidos, Além das celebridades norte-americanas, Britto também produziu telas para Bill Clinton, o príncipe William, Kate Middleton, Pelé, Roberto Marinho e para a ex-Presidente do país, Dilma Rousseff.",
+				audioDasCuriosidadeArte[3],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
 
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"A qual movimento artístico pertence a seguinte obra?",
+				PerguntasClass.Temas.Arte,
+				Materiais[7],
+				audioDasPerguntas[6],
+				audioDasAlternativas[6],
+				"Arte conceitual",
+				"A arte conceitual teve sua origem na obra de Duchamp, no episódio no qual enviou um mictório para um salão de arte,sob o título “A Fonte”, o artista inaugurou contra a sua própria vontade, um novo movimento artístico  na qual a idéia é o mais importante da obra.",
+				audioDasCuriosidadeArte[4],
+				"Expressionismo",
+				"Expressionismo que teve seu auge no final do século XIX e início do século XX.Sem preocupação com a beleza ou com os padrões.O período em que se desenvolveu esse movimento artísticos foi muito conturbado. Cenário da primeira guerra mundial. A pintura “O Grito” é o melhor exemplo do estilo artístico denominado Expressionismo.",
+				audioDasCuriosidadeArte[5],
+				"Naturalismo",
+				"Naturalismo é conhecido por ser a radicalização do Realismo, baseando-se na observação fiel da realidade e na experiência, mostrando que o indivíduo é determinado pelo ambiente e pela hereditariedade. O movimento esboçou o que se pode declarar como os primeiros passos do pensamento teórico evolucionista de Charles Darwin.",
+				audioDasCuriosidadeArte[6],
+				"Simbolismo",
+				"Simbolismo é um movimento literário da poesia e das outras artes que surgiu na França, no final do século XIX, como oposição ao realismo, ao naturalismo e ao positivismo da época. Movido pelos ideais românticos, teve suas origens de “As Flores do Mal”, do poeta Charles Baudelaire.",
+				audioDasCuriosidadeArte[7],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false));
+
+		GameControl.gControl.perguntasList.Add (
+			new PerguntasClass(
+				"Qual marca de creme dental foi comprada e fundida para se tornar a atual Sorriso?",
+				PerguntasClass.Temas.Propaganda,
+				Materiais[8],
+				audioDasPerguntas[7],
+				audioDasAlternativas[7],
+				"Kolynos",
+				"Kolynos é uma marca de pasta-de-dente muito famosa no Brasil, que foi extinta e substituída na fusão, pela então recém-criada Sorriso.A força desta marca era tão grande que apenas recentemente, em 2003, quando indagados por uma pesquisa, que tinha o objetivo de tabular as marcas mais lembradas na cabeça do consumidor , a Kolynos perdeu a primeira posição para sua substituta, a Sorriso. Um fato incrível, já que desde 1997 a marca havia sido extinta.",
+				audioDasCuriosidadePropaganda[4],
+				"Colgate",
+				" William Colgate, fundador da Colgate-Palmolive, lançou o tubo de creme dental, que revolucionou a maneira de vender tal produto e até o momento a venda era feita em pó ou em frascos.O Colgate Ribbon Dental Cream foi o primeiro creme dental em um tubo flexível, introduzido em 1896, quando tinha anteriormente sido vendido em frascos de vidro desde 1873.",
+				audioDasCuriosidadePropaganda[5],
+				"Close-up",
+				"Close-Up é uma marca pertencente à multinacional Unilever referente a uma linha de produtos de higiene bucal. O gel dental desta linha foi o primeiro a ser lançado no mercado norte-americano. Foi lançado no Brasil em 1972. Na década de 60 foi o primeiro gel dental dos EUA, e no Brasil Close Up chegou pouco tempo depois, em 1971, construindo uma identidade própria, inovadora e que fala com o público jovem através de suas campanhas ousadas e produtos diferenciados.",
+				audioDasCuriosidadePropaganda[6],
+				"Gessy",
+				"Desde 1946, a publicidade usava o fim de um romance com o mau hálito para promover o Creme Dental Gessy,utilizando a seguinte deixa: Porque, às vezes, todo o curso de um romance depende de um pormenor… da pureza e frescor de seu hálito. Esteja certa de que isto não lhe sucederá, protegendo seu hálito… protegendo seus dentes com o creme dental Gessy.",
+				audioDasCuriosidadePropaganda[7],
+				"Resposta5",
+				"Curiosidade5",
+				"Resposta6",
+				"Curiosidade6",
+				false)); 
 
 		/*GameControl.gControl.perguntasList.Add(
 			new PerguntasClass(
@@ -100,9 +176,9 @@ public class QuestionControllScript : MonoBehaviour {
 				"resposta5",
 				"curiosidade5",
 				"resposta6",
-				"curiosidade6"));*/
+				"curiosidade6"));
 
-	
+
 
 		GameControl.gControl.perguntasList.Add(
 			new PerguntasClass(
@@ -204,8 +280,8 @@ public class QuestionControllScript : MonoBehaviour {
 				"curiosidade6",
 				false));
 
+	*/
 
-			
 
 		/*
 		GameControl.gControl.perguntasList.Add (
@@ -248,6 +324,9 @@ public class QuestionControllScript : MonoBehaviour {
 
 		//GameControl.gControl.perguntasList [1].respostasBd [2].correta = true;
 
+
+		//vaziosRot [0].transform.position = new Vector3 (vaziosRot [0].transform.position.x, vaziosRot [0].transform.position.y, vaziosRot [0].transform.position.z);
+
 		#region "Perguntas sem Material e Áudio"
 		/*
 		//PERGUNTAS DE ARTE -------------------------------------------------------------------------
@@ -277,55 +356,9 @@ public class QuestionControllScript : MonoBehaviour {
 				"Curiosidade6",
 				false));
 
-		GameControl.gControl.perguntasList.Add (
-			new PerguntasClass(
-				"A qual movimento artístico pertence a seguinte obra?",
-				PerguntasClass.Temas.Arte,
-				Materiais[0],
-				audioDasPerguntas[0],
-				audioDasAlternativas[0],
-				"Arte conceitual",
-				"A arte conceitual teve sua origem na obra de Duchamp, no episódio no qual enviou um mictório para um salão de arte,sob o título “A Fonte”, o artista inaugurou contra a sua própria vontade, um novo movimento artístico  na qual a idéia é o mais importante da obra.",
-				audioDasCuriosidadeArte[0],
-				"Expressionismo",
-				"Expressionismo que teve seu auge no final do século XIX e início do século XX.Sem preocupação com a beleza ou com os padrões.O período em que se desenvolveu esse movimento artísticos foi muito conturbado. Cenário da primeira guerra mundial. A pintura “O Grito” é o melhor exemplo do estilo artístico denominado Expressionismo.",
-				audioDasCuriosidadeArte[0],
-				"Naturalismo",
-				"Naturalismo é conhecido por ser a radicalização do Realismo, baseando-se na observação fiel da realidade e na experiência, mostrando que o indivíduo é determinado pelo ambiente e pela hereditariedade. O movimento esboçou o que se pode declarar como os primeiros passos do pensamento teórico evolucionista de Charles Darwin.",
-				audioDasCuriosidadeArte[0],
-				"Simbolismo",
-				"Simbolismo é um movimento literário da poesia e das outras artes que surgiu na França, no final do século XIX, como oposição ao realismo, ao naturalismo e ao positivismo da época. Movido pelos ideais românticos, teve suas origens de “As Flores do Mal”, do poeta Charles Baudelaire.",
-				audioDasCuriosidadeArte[0],
-				"Resposta5",
-				"Curiosidade5",
-				"Resposta6",
-				"Curiosidade6",
-				false));
 
-		GameControl.gControl.perguntasList.Add (
-			new PerguntasClass(
-				"Quem foi o autor do quadro “Criança Morta”?",
-				PerguntasClass.Temas.Arte,
-				Materiais[0],
-				audioDasPerguntas[0],
-				audioDasAlternativas[0],
-				"Candido Portinari",
-				"Candido Portinari realizou cerca de 4.500 obras em 40 anos de trabalho , só cursou o primário. Quando ainda estava na escola, Portinari desenhou um leão em sala de aula. A obra foi tão adorada que ele foi obrigado a desenhar a capa de todas as provas que seriam expostas no final de ano. Aos 9 anos pintou o teto da igreja de sua cidade.",
-				audioDasCuriosidadeArte[0],
-				"Lasar Segall",
-				"Lasar Segall nasceu na Lituânia. Em 1912 veio ao Brasil,deu aulas de desenho à jovem Jenny Klabin,com quem iria se casar doze anos mais tarde. No final daquele voltou à Europa   e conheceu Margarete Quack, com quem se casou no fim Primeira Guerra teve.Lasar e Margarete voltam ao Brasil. Um ano depois, em 1924, se separou e se casou com Jenny Klabin, sua ex-aluna.",
-				audioDasCuriosidadeArte[0],
-				"Tarsila do Amaral",
-				"Foi considerada a pintora mais representativa da primeira fase do Modernismo no Brasil e recebeu o Prêmio de Pintura Nacional na I Bienal de São Paulo, em 1951. A pintora costumava levar cachaça brasileira em suas viagens ao exterior. Ela enganava os funcionários da alfândega dizendo que era álcool para “passar na pele”.",
-				audioDasCuriosidadeArte[0],
-				"Romero Britto",
-				"Romero Britto é um artista plástico brasileiro de grande renome internacional, radicado nos Estados Unidos, Além das celebridades norte-americanas, Britto também produziu telas para Bill Clinton, o príncipe William, Kate Middleton, Pelé, Roberto Marinho e para a ex-Presidente do país, Dilma Rousseff.",
-				audioDasCuriosidadeArte[0],
-				"Resposta5",
-				"Curiosidade5",
-				"Resposta6",
-				"Curiosidade6",
-				false));
+
+
 
 		GameControl.gControl.perguntasList.Add (
 			new PerguntasClass(
@@ -505,7 +538,7 @@ public class QuestionControllScript : MonoBehaviour {
 				"Resposta6",
 				"Curiosidade6",
 				false));
-			
+
 		// PERGUNTAS DE HISTORIA ----------------------------------------------------------------------------------------------
 
 		GameControl.gControl.perguntasList.Add (
@@ -585,30 +618,7 @@ public class QuestionControllScript : MonoBehaviour {
 				"Curiosidade6",
 				false));
 
-		GameControl.gControl.perguntasList.Add (
-			new PerguntasClass(
-				"Qual marca de creme dental foi comprada e fundida para se tornar a atual Sorriso?",
-				PerguntasClass.Temas.Propaganda,
-				Materiais[0],
-				audioDasPerguntas[0],
-				audioDasAlternativas[0],
-				"Kolynos",
-				"Kolynos é uma marca de pasta-de-dente muito famosa no Brasil, que foi extinta e substituída na fusão, pela então recém-criada Sorriso.A força desta marca era tão grande que apenas recentemente, em 2003, quando indagados por uma pesquisa, que tinha o objetivo de tabular as marcas mais lembradas na cabeça do consumidor , a Kolynos perdeu a primeira posição para sua substituta, a Sorriso. Um fato incrível, já que desde 1997 a marca havia sido extinta.",
-				audioDasCuriosidadePropaganda[0],
-				"Colgate",
-				" William Colgate, fundador da Colgate-Palmolive, lançou o tubo de creme dental, que revolucionou a maneira de vender tal produto e até o momento a venda era feita em pó ou em frascos.O Colgate Ribbon Dental Cream foi o primeiro creme dental em um tubo flexível, introduzido em 1896, quando tinha anteriormente sido vendido em frascos de vidro desde 1873.",
-				audioDasCuriosidadePropaganda[0],
-				"Close-up",
-				"Close-Up é uma marca pertencente à multinacional Unilever referente a uma linha de produtos de higiene bucal. O gel dental desta linha foi o primeiro a ser lançado no mercado norte-americano. Foi lançado no Brasil em 1972. Na década de 60 foi o primeiro gel dental dos EUA, e no Brasil Close Up chegou pouco tempo depois, em 1971, construindo uma identidade própria, inovadora e que fala com o público jovem através de suas campanhas ousadas e produtos diferenciados.",
-				audioDasCuriosidadePropaganda[0],
-				"Sensodyne",
-				"Sensodyne é uma marca de creme dental comercializada para pessoas com dentes sensíveis ou hipersensibilidade dentária. É uma marca registrada da GlaxoSmithKline, que a adquiriu em 2001 na compra da Block Drug que desenvolveu o produto.A Sensodyne tem duas linhas principais de produtos: para sensibilidade e para erosão ácida Ambos os produtos vêm em uma variedade de sabores e com a opção de branqueamento",
-				audioDasCuriosidadePropaganda[0],
-				"Resposta5",
-				"Curiosidade5",
-				"Resposta6",
-				"Curiosidade6",
-				false));
+
 
 		//PERGUNTAS DE RADIO/TV -------------------------------------------------------------------------------------------------------
 
@@ -763,20 +773,31 @@ public class QuestionControllScript : MonoBehaviour {
 				false));
 		*/
 		#endregion
-	
 
 	}
 	// Use this for initialization
 	void Awake () {
 		Instance = this;
 	}
-		
-	
+
+
 	// Update is called once per frame
 	void Update () {
 
 
-			
+
+	}
+
+	public void VoltaRotacaoVazio(){
+		vaziosRot [0].transform.position = respawnPosition.transform.position;
+		vaziosRot [0].transform.localRotation = Quaternion.identity;//Quaternion.Euler (0, 0, 0);
+
+		/*vaziosRot [1].transform.rotation = Quaternion.Euler (0, 0, 0);
+		vaziosRot [1].transform.localPosition = new Vector3 (-2.56f, 1.15f, -3.27f);
+		vaziosRot [2].transform.rotation = Quaternion.Euler (0, 0, 0);
+		vaziosRot [2].transform.localPosition = new Vector3 (-2.59f, 0, -3.27f);
+		vaziosRot [3].transform.rotation = Quaternion.Euler (0, 0, 0);
+		vaziosRot [3].transform.localPosition = new Vector3 (-5.42f, 1.15f, -3.27f);*/
 	}
 
 	public void ContaSmile(){
@@ -791,7 +812,8 @@ public class QuestionControllScript : MonoBehaviour {
 
 		}
 
-		if (contaPerguntas == 2) {
+		if (contaPerguntas == 3) {
+
 			canvasPontuacaoGrupo.SetActive (true);
 			canvasPerguntaCuriosidade.SetActive (false);
 			canvasRating.SetActive (false);
@@ -822,7 +844,8 @@ public class QuestionControllScript : MonoBehaviour {
 		}
 
 
-		if (contaPerguntas == 2) {
+		if (contaPerguntas == 3) {
+
 			canvasPontuacaoGrupo.SetActive (true);
 			canvasPerguntaCuriosidade.SetActive (false);
 			canvasRating.SetActive (false);
@@ -843,7 +866,7 @@ public class QuestionControllScript : MonoBehaviour {
 	}
 
 	public void ContaPontuacaoGrupoVSGrupo(){
-		
+
 		if (GrupoVSGrupoGame == true) {
 			if (vezVermelho) {
 				PontosVermelho -= 10;
@@ -860,34 +883,34 @@ public class QuestionControllScript : MonoBehaviour {
 	public void ContaPontuacao(){
 
 		if (GrupoVSGrupoGame == false) {
-		
+
 			if (QuestionControllScript.Instance.TemaEscolhido == PerguntasClass.Temas.Arte) {
-				PointsArte += 1;
+				PointsArte += 10;
 				pontuacaoText [0].text = PointsArte.ToString ();
 			}
 
 			if (QuestionControllScript.Instance.TemaEscolhido == PerguntasClass.Temas.Esporte) {
-				PointsEsporte += 1;
+				PointsEsporte += 10;
 				pontuacaoText [1].text = PointsEsporte.ToString ();
 			}
 
 			if (QuestionControllScript.Instance.TemaEscolhido == PerguntasClass.Temas.Cinema) {
-				PointsCinema += 1;
+				PointsCinema += 10;
 				pontuacaoText [2].text = PointsCinema.ToString ();
 			}
 
 			if (QuestionControllScript.Instance.TemaEscolhido == PerguntasClass.Temas.Radio) {
-				PointsRadio += 1;
+				PointsRadio += 10;
 				pontuacaoText [3].text = PointsRadio.ToString ();
 			}
 
 			if (QuestionControllScript.Instance.TemaEscolhido == PerguntasClass.Temas.História) {
-				PointsHistoria += 1;
+				PointsHistoria += 10;
 				pontuacaoText [4].text = PointsHistoria.ToString ();
 			}
 
 			if (QuestionControllScript.Instance.TemaEscolhido == PerguntasClass.Temas.Propaganda) {
-				PointsPropaganda += 1;
+				PointsPropaganda += 10;
 				pontuacaoText [5].text = PointsPropaganda.ToString ();
 			}
 		} else {
@@ -910,8 +933,8 @@ public class QuestionControllScript : MonoBehaviour {
 
 			groupSelected = true;
 		}
-			
-			
+
+
 		if (randomGroup == 0) {
 			HUDGrupoVSGrupo.SetActive (true);
 			grupoV.SetActive (false);
@@ -930,16 +953,16 @@ public class QuestionControllScript : MonoBehaviour {
 	}
 
 	public void SelecionaQuestao(){
-		
+
 
 		int qtdPerguntaTema = 0;
-	
+
 
 
 
 		for (int i = 0; i < GameControl.gControl.perguntasList.Count; i++) {
 			if (GameControl.gControl.perguntasList [i].tema == TemaEscolhido) {
-				qtdPerguntaTema++; 
+				qtdPerguntaTema++;
 			}
 		}
 
@@ -963,7 +986,7 @@ public class QuestionControllScript : MonoBehaviour {
 			//Debug.Log ("correcao");
 
 		}
-	
+
 
 		iterations++;
 
@@ -979,13 +1002,13 @@ public class QuestionControllScript : MonoBehaviour {
 		}
 		if (iterations > 1000) {
 			//Debug.Log ("Bug Splash");
-		
+
 			//Debug.Log("Tema Escolhido pelo jogador:" + TemaEscolhido);
 			//Debug.Log("Tema da Pergunta" + GameControl.gControl.perguntasList[randomNumber].tema);
 			//Debug.Log("Quantidade de perguntas do tema:" + qtdPerguntaTema);
 			//Debug.Log("Quantidade em que ela foi tentada:" + qtdPerguntasTentada);
 			selecao = true;
-			UnityEditor.EditorApplication.isPlaying = false;
+			//UnityEditor.EditorApplication.isPlaying = false;
 		}
 		//Debug.Log(GameControl.gControl.perguntasList[randomNumber].tentada);
 	}
@@ -995,35 +1018,35 @@ public class QuestionControllScript : MonoBehaviour {
 
 
 
-	
+
 
 		int qtdPerguntaTema = 0;
 		int qtdPerguntasTentada = 0;
 		for (int i = 0; i < GameControl.gControl.perguntasList.Count; i++) {
 			if (GameControl.gControl.perguntasList [i].tema == TemaEscolhido) {
-				qtdPerguntaTema++; 
+				qtdPerguntaTema++;
 			}
 		}
 		//for(PerguntasClass.Temas i = null; i != TemaEscolhido; i = GameControl.gControl.perguntasList[Random.Range(perguntaInicial,GameControl.gControl.perguntasList.Count)].tema)
 		/*do {
-			
-			
+
+
 			randomNumber = UnityEngine.Random.Range (perguntaInicial, GameControl.gControl.perguntasList.Count);
-	
+
 			if(GameControl.gControl.perguntasList[randomNumber].tentada == true && GameControl.gControl.perguntasList[randomNumber].tema == TemaEscolhido){
 				qtdPerguntasTentada++;
-					
+
 			}
 
 			if(qtdPerguntaTema == qtdPerguntasTentada){
-				
+
 				for (int i = 0; i < GameControl.gControl.perguntasList.Count; i++) {
 					if (GameControl.gControl.perguntasList [i].tema == TemaEscolhido) {
 						GameControl.gControl.perguntasList[i].tentada = false;
 					}
 				}
 			}
-				
+
 			Debug.Log("Quantidade de perguntas do tema:" + qtdPerguntaTema);
 			Debug.Log("Quantidade em que ela foi tentada:" + qtdPerguntasTentada);
 			Debug.Log("Tema Escolhido pelo jogador:" + TemaEscolhido);
@@ -1036,20 +1059,20 @@ public class QuestionControllScript : MonoBehaviour {
 
 		for (bool ok = false; ok != true; ok = selecao) {
 			SelecionaQuestao ();
-			
+
 		}
 
 
 
 
 
-			pergunta.GetComponent<ButtonScript> ().QuestionText.text = GameControl.gControl.perguntasList [randomNumber].textoDaPerguntaBd; 
-			
+			pergunta.GetComponent<ButtonScript> ().QuestionText.text = GameControl.gControl.perguntasList [randomNumber].textoDaPerguntaBd;
+
 			perguntaImagem.GetComponent<MeshRenderer> ().material = GameControl.gControl.perguntasList [randomNumber].materialImagem;
 			perguntaImagem2.GetComponent<ButtonScript> ().audioDaPergunta = GameControl.gControl.perguntasList [randomNumber].audioDaQuestao;
 			pergunta.GetComponent<ButtonScript> ().audioDasAlternativas = GameControl.gControl.perguntasList [randomNumber].alternativas;
-			
-				
+
+
 
 		for (int i = 0; i < 4; i++) {
 			randomControll [i] = i;
@@ -1064,11 +1087,11 @@ public class QuestionControllScript : MonoBehaviour {
 
 
 		if (resposta0.GetComponent<ButtonScript> ().AnswerText.text == "") {
-			
+
 			do {
 				randomAnswer = randomControll [Random.Range (0, 4)];
 			} while(randomAnswer == -1);
-					
+
 			resposta0.GetComponent<ButtonScript> ().AnswerText.text = GameControl.gControl.perguntasList [randomNumber].respostasBd [randomAnswer].textoDaResposta;
 			curiosidade0.GetComponent<ButtonScript> ().CuriosidadeText.text = GameControl.gControl.perguntasList [randomNumber].respostasBd [randomAnswer].curiosidade;
 			if (randomAnswer == 0) {
@@ -1083,6 +1106,8 @@ public class QuestionControllScript : MonoBehaviour {
 
 			if (randomAnswer == 0) {
 				resposta0.GetComponent<ButtonScript> ().isCorrect = true;
+			}else {
+				resposta0.GetComponent<ButtonScript> ().isCorrect = false;
 			}
 			for (int i = 0; i < 4; i++) {
 				if (randomControll [i] == randomAnswer) {
@@ -1114,6 +1139,9 @@ public class QuestionControllScript : MonoBehaviour {
 			if (randomAnswer == 0) {
 				resposta1.GetComponent<ButtonScript> ().isCorrect = true;
 			}
+			else {
+				resposta1.GetComponent<ButtonScript> ().isCorrect = false;
+			}
 			for (int i = 0; i < 4; i++) {
 				if (randomControll [i] == randomAnswer) {
 					randomControll [i] = -1;
@@ -1122,7 +1150,7 @@ public class QuestionControllScript : MonoBehaviour {
 			}
 		}
 		if (resposta2.GetComponent<ButtonScript> ().AnswerText.text == "") {
-			
+
 			do {
 				randomAnswer = randomControll [Random.Range (0, 4)];
 			} while(randomAnswer == -1);
@@ -1140,6 +1168,8 @@ public class QuestionControllScript : MonoBehaviour {
 			}
 			if (randomAnswer == 0) {
 				resposta2.GetComponent<ButtonScript> ().isCorrect = true;
+			} else {
+				resposta2.GetComponent<ButtonScript> ().isCorrect = false;
 			}
 			for (int i = 0; i < 4; i++) {
 				if (randomControll [i] == randomAnswer) {
@@ -1150,7 +1180,7 @@ public class QuestionControllScript : MonoBehaviour {
 		}
 
 		if (resposta3.GetComponent<ButtonScript> ().AnswerText.text == "") {
-			
+
 			do {
 				randomAnswer = randomControll [Random.Range (0, 4)];
 			} while(randomAnswer == -1);
@@ -1168,7 +1198,10 @@ public class QuestionControllScript : MonoBehaviour {
 			}
 			if (randomAnswer == 0) {
 				resposta3.GetComponent<ButtonScript> ().isCorrect = true;
+			} else {
+				resposta3.GetComponent<ButtonScript> ().isCorrect = false;
 			}
+
 			for (int i = 0; i < 4; i++) {
 				if (randomControll [i] == randomAnswer) {
 					randomControll [i] = -1;
@@ -1181,10 +1214,11 @@ public class QuestionControllScript : MonoBehaviour {
 		selecao = false;
 		qtdPerguntasTentada = 0;
 
+
 		/*int qtdPerguntaTema = 0;
 		for (int i = 0; i < GameControl.gControl.perguntasList.Count; i++) {
 			if (GameControl.gControl.perguntasList [i].tema == TemaEscolhido) {
-				qtdPerguntaTema++; 
+				qtdPerguntaTema++;
 			}
 		}
 
@@ -1210,12 +1244,12 @@ public class QuestionControllScript : MonoBehaviour {
 		}*/
 
 
-			
+
 			/*resposta1.GetComponent<ButtonScript> ().AnswerText.text = GameControl.gControl.perguntasList [randomNumber].respostasBd [1].textoDaResposta;
 			resposta2.GetComponent<ButtonScript> ().AnswerText.text = GameControl.gControl.perguntasList [randomNumber].respostasBd [2].textoDaResposta;
 			resposta3.GetComponent<ButtonScript> ().AnswerText.text = GameControl.gControl.perguntasList [randomNumber].respostasBd [3].textoDaResposta;
 
-			
+
 			curiosidade1.GetComponent<ButtonScript> ().CuriosidadeText.text = GameControl.gControl.perguntasList [randomNumber].respostasBd [1].curiosidade;
 			curiosidade2.GetComponent<ButtonScript> ().CuriosidadeText.text = GameControl.gControl.perguntasList [randomNumber].respostasBd [2].curiosidade;
 			curiosidade3.GetComponent<ButtonScript> ().CuriosidadeText.text = GameControl.gControl.perguntasList [randomNumber].respostasBd [3].curiosidade;*/
@@ -1225,6 +1259,3 @@ public class QuestionControllScript : MonoBehaviour {
 
 
 }
-		
-
-
