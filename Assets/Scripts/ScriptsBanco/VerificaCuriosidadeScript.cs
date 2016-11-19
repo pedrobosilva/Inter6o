@@ -92,7 +92,7 @@ public class VerificaCuriosidadeScript : MonoBehaviour {
 
 		QuestionControllScript.Instance.qtdPerguntasTentada = 0;
 	
-
+		QuestionControllScript.Instance.pergunta.SetActive (true);
 		Respostas [0].SetActive (true);
 		Respostas [1].SetActive (true);
 		Respostas [2].SetActive (true);

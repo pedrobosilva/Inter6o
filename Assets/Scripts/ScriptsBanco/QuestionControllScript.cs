@@ -812,7 +812,8 @@ public class QuestionControllScript : MonoBehaviour {
 
 		}
 
-		if (contaPerguntas == 2) {
+		if (contaPerguntas == 3) {
+
 			canvasPontuacaoGrupo.SetActive (true);
 			canvasPerguntaCuriosidade.SetActive (false);
 			canvasRating.SetActive (false);
@@ -843,7 +844,8 @@ public class QuestionControllScript : MonoBehaviour {
 		}
 
 
-		if (contaPerguntas == 2) {
+		if (contaPerguntas == 3) {
+
 			canvasPontuacaoGrupo.SetActive (true);
 			canvasPerguntaCuriosidade.SetActive (false);
 			canvasRating.SetActive (false);

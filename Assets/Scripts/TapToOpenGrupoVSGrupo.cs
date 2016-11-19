@@ -59,6 +59,14 @@ public class TapToOpenGrupoVSGrupo : MonoBehaviour {
 			QuestionControllScript.Instance.TemaEscolhido = PerguntasClass.Temas.Propaganda;
 		}
 
+		QuestionControllScript.Instance.qtdPerguntasTentada = 0;
+
+
+
+		QuestionControllScript.Instance.SetQuestion();
+
+		Debug.Log (QuestionControllScript.Instance.contaPerguntas);
+
 	}
 
 	public void openGameObject(){
@@ -73,11 +81,6 @@ public class TapToOpenGrupoVSGrupo : MonoBehaviour {
 			"speed", 2,
 			"looptype", iTween.LoopType.none,
 			"easetype", iTween.EaseType.linear));
-
-		QuestionControllScript.Instance.qtdPerguntasTentada = 0;
-
-		QuestionControllScript.Instance.SetQuestion();
-
 
 		QuestionControllScript.Instance.contaPerguntas += 1;
 
@@ -96,6 +99,7 @@ public class TapToOpenGrupoVSGrupo : MonoBehaviour {
 
 		}
 
+	
 
 		ObjectToClose.SetActive (false);
 		ObjectToClose2.SetActive (false);
